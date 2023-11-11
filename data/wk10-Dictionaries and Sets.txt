@@ -1,0 +1,1068 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 10
+Dictionaries and Sets
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1.
+
+2.
+
+Unordered Data Concept
+
+• Understand the concepts of Dictionary and Set
+
+Dictionary
+
+• Work effectively with Dictionary and Set
+
+•
+•
+•
+•
+
+• Create Dictionary and Set structures
+
+Concept: key-value pair
+Define and Access
+Modify
+Compare
+
+Set
+•
+•
+•
+•
+•
+
+• Access and Manipulate data within them
+• Perform Mathematical Set Operations
+
+Concept
+Define and Access
+Modify
+Compare
+Mathematical Set Operations
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+Unordered Data Concept
+
+Two fundamental concepts in unordered data structures are:
+1. Dictionary:
+
+This is an unordered collection of data consisting of key-value pairs. It provides an
+immutable mapping of keys to values.
+
+2. Set:
+
+A set is an unordered collection of elements, and each element within a set is unique
+and immutable.
+
+In summary, the order of elements within these data structures is not
+significant.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+Unordered Data Concept
+
+Ordered vs. Unordered Data
+Ordered Data – Examples
+• Define:
+
+data1 = ['a', 'b', 'c', 1, 2, 3]
+data2 = ('alex', 'alice', 'alan')
+
+• Access by index:
+data1[0]
+data2[1]
+
+# list
+# tuple
+
+# 'a'
+# 'alice'
+
+Unordered Data – Examples
+• Define:
+
+dict1 = {'vat': 'something you must pay', 'exam': 'something you must pass'}
+set1 = {'apple', 'banana', 'orange'}
+
+• Access without index:
+dict1['vat']
+'apple' in set1
+10. Dictionaries and Sets
+
+# 'something you must pay'
+# True
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Dictionary
+
+• A dictionary connects keys with values:
+
+• Dictionaries in programming provide a way to associate keys (unique identifiers) with corresponding
+values. This association allows for efficient retrieval and manipulation of data.
+
+• Each key maps to a specific value:
+
+• In a dictionary, each key is associated with a specific value, and this mapping allows you to retrieve
+the value using the key as a reference. This key-value pair is a fundamental concept in dictionaries
+and is used in many programming languages for various purposes, such as storing and organizing
+data.
+
+Keys
+day
+12
+pi
+
+Values
+Monday
+‘one-two’
+3.14
+
+example = {'day': 'Monday',
+10. Dictionaries and Sets
+
+12: 'one-two', 'pi': 3.14}
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Dictionary
+
+• A dictionary’s keys must be immutable and unique:
+• Example: person = {'name': 'John', 'age': 30, 'city': 'New York’}
+• The keys ('name', 'age', and 'city') are strings, which are immutable and unique within the dictionary.
+
+• No slicing available:
+
+• Dictionaries do not support slicing like lists or strings. You access values by their keys directly.
+
+• Multiple keys can have the same value:
+
+• Example: fruits = {'apple': 'red', 'banana': 'yellow', 'cherry':
+• In this dictionary, both 'apple' and 'cherry' have the same value 'red’.
+
+'red'}
+
+• Summary of the examples:
+• Dictionary: person
+
+• Keys: 'name' (string), 'age' (integer), 'city' (string)
+• Values: 'John' (string), 30 (integer), 'New York' (string)
+
+• Dictionary: fruits
+
+• Keys: 'apple' (string), 'banana' (string), 'cherry' (string)
+• Values: 'red' (string), 'yellow' (string), 'red' (string)
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+1. Dictionary
+
+• Examples of dictionaries with their keys, key types, values, and value types
+
+Deitel, Paul, and Harvey Deitel. Intro to Python for Computer Science and Data Science. Pearson Education, 2020.
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+1. Dictionary
+
+Creating a Dictionary
+•
+•
+•
+•
+
+Format: name = {key: value}
+Comma-separated list of key-value pairs
+A dictionary is unordered – the display order can differ from the order of addition
+Example: Create a dictionary of currency codes with the following keys and values
+• Keys: Thailand, Japan, Finland, France
+• Values: THB, JPY, EUR, EUR
+
+currency_code = {'Thailand': 'THB', 'Japan': 'JPY', 'Finland': 'EUR', 'France': 'EUR’}
+# Check the number of elements in the dictionary
+len(currency_code) # Returns 4 elements
+# Clear all elements from the dictionary
+currency_code.clear()
+# Check the number of elements after clearing
+len(currency_code) # Returns 0 elements
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+1. Dictionary
+
+Accessing Dictionary Elements:
+• Access an individual item with key:
+currency_code['France']
+
+# EUR
+
+• Access through iteration:
+
+.item()  provides access to key-value pairs.
+for key, value in currency_code.items():
+print(f'The currency of {key} is {value}.')
+
+------------- results -------------The currency of Thailand is THB.
+The currency of Japan is JPY.
+The currency of Finland is EUR.
+The currency of France is EUR.
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+1. Dictionary
+
+.keys()
+
+ provides access to keys.
+
+.values()  provides access to values.
+
+for keys in currency_code.keys():
+print(f'The key is {keys}.')
+
+for values in currency_code.values():
+print(f'The value is {values}.')
+
+------------- results --------------
+
+------------- results --------------
+
+The key is Thailand.
+
+The value is THB.
+
+The key is Japan.
+
+The value is JPY.
+
+The key is Finland.
+
+The value is EUR.
+
+The key is France.
+
+The value is EUR.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+1. Dictionary
+
+Basic Dictionary Operations:
+Operation
+
+Explanation
+
+Update a value for an existing key
+
+Modify the value associated with an existing key in the dictionary.
+
+Add a new key-value pair
+
+Introduce a new key-value pair into the dictionary.
+
+Remove a key-value pair
+
+Delete a specific key-value pair from the dictionary.
+
+Check for a specific key
+
+Verify if a particular key exists in the dictionary using the 'in' operator.
+
+Access a non-existing key
+
+Attempting to access a key that doesn't exist in the dictionary raises a KeyError.
+
+Convert Dictionary to List
+
+Convert dictionary keys, values, and items to lists.
+
+Convert Dictionary to Tuple
+
+Convert dictionary keys, values, and items to tuples.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+1. Dictionary
+
+Basic Dictionary Operations:
+• Update a new value to an existing key:
+Modify the value associated with an existing key in the dictionary.
+• Change the value associated with the 'Thailand' key from 'THB' to 'baht’:
+currency_code['Thailand'] = 'baht’
+• Change it back to 'THB’:
+currency_code.update(Thailand='THB')
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+1. Dictionary
+
+Basic Dictionary Operations:
+• Add a new key-value pair:
+Introduce a new key-value pair into the dictionary.
+• Add a new key-value pair 'China' and 'CNY' to an existing dictionary:
+currency_code['China'] = 'CNY'
+
+• Remove a key-value pair:
+Delete a specific key-value pair from the dictionary.
+• Delete the key-value pair associated with 'France’:
+del currency_code['France’]
+
+• Delete the key-value pair associated with 'Japan’:
+currency_code.pop('Japan')
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+1. Dictionary
+
+Basic Dictionary Operations:
+• Check if a specific key is in a dictionary:
+Verify if a particular key exists in the dictionary using the in operator.
+• Check if 'Thailand' is a key in the dictionary:
+'Thailand' in currency_code
+
+# True
+
+• Check if 'Japan' is a key in the dictionary:
+'Japan' in currency_code
+
+# False
+
+• Accessing a non-existing key:
+Trying to access a key that doesn't exist in the dictionary results in a KeyError.
+• Attempting to access a key that doesn't exist will raise a KeyError:
+currency_code['Japan']
+
+10. Dictionaries and Sets
+
+# KeyError: 'Japan'
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+1. Dictionary
+
+Basic Dictionary Operations:
+• Convert Dictionary to List:
+• Convert the dictionary keys to a list:
+list(currency_code.keys())
+
+# ['Thailand', 'Finland', 'China']
+
+• Convert the dictionary values to a list:
+list(currency_code.values())
+
+# ['baht', 'EUR', 'CNY']
+
+• Convert the dictionary key-value pairs to a list of tuples:
+list(currency_code.items())
+
+10. Dictionaries and Sets
+
+# [('Thailand', 'baht'), ('Finland', 'EUR'), ('China', 'CNY')]
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+1. Dictionary
+
+Basic Dictionary Operations:
+• Convert Dictionary to Tuple:
+• Convert the dictionary keys to a tuple:
+tuple(currency_code.keys())
+
+# ('Thailand', 'Finland', 'China')
+
+• Convert the dictionary values to a tuple:
+tuple(currency_code.values())
+
+# ('baht', 'EUR', 'CNY')
+
+• Convert the dictionary key-value pairs to a tuple of tuples:
+tuple(currency_code.items())
+
+10. Dictionaries and Sets
+
+# (('Thailand', 'baht'), ('Finland', 'EUR'), ('China', 'CNY'))
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+1. Dictionary
+
+Dictionary Comparison
+The comparison dict_A == dict_B evaluates to True if the dictionaries dict_A and dict_B
+have identical key-value pairs, regardless of their order.
+• Examples:
+dict_A = {'eat': 'rice', 'drink': 'water'}
+dict_B = {'drink': 'water', 'eat': 'rice'}
+dict_C = {'eat': 'noodle', 'drink': 'wine'}
+# Check if dict_A and dict_B have identical key-value pairs
+result_1 = dict_A == dict_B # Returns True
+# Check if dict_A and dict_C have identical key-value pairs
+result_2 = dict_A == dict_C # Returns False
+# Check if dict_A and dict_C are not identical
+result_3 = dict_A != dict_C # Returns True
+# Check if the values for the key 'eat' in dict_A and dict_B are the same
+result_4 = dict_A['eat'] == dict_B['eat'] # Returns True
+# Check if the values for the key 'eat' in dict_A and dict_C are the same
+result_5 = dict_A['eat'] == dict_C['eat'] # Returns False
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+1. Dictionary
+
+Dictionary Comprehension
+• Dictionary comprehension is a quick way to create dictionaries in Python using a single
+line of code.
+• It's like a shortcut for creating dictionaries by specifying how keys and values should be
+generated using an expression.
+• The standard format for a dictionary comprehension in Python is:
+name = {k: v for k, v in dict.items()}
+• Where dict is the name of the dictionary you want to use for generating the new
+dictionary.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+1. Dictionary
+
+Dictionary Comprehension
+• Example 1: Swapping Between Day and Color with Dictionary Comprehension
+date_color1 = {'sunday': 'red', 'monday': 'yellow'}
+date_color2 = {color: day for day, color in date_color1.items()}
+• A dictionary date_color1 with days as keys and colors as values.
+• Using a dictionary comprehension, you create a new dictionary by swapping the keys and values,
+colors become keys, and days become values.
+• The result is {'red': 'sunday', 'yellow': 'monday'}.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+1. Dictionary
+
+Dictionary Comprehension
+• Example 2: Calculating Average Score with Dictionary Comprehension
+
+student_grade1 = {'alice': [100, 90, 80], 'bob': [90, 70]}
+subject_ave1 = {k: sum(v)/len(v) for k, v in student_grade1.items()}
+• A dictionary student_grade1 with students as keys and their scores as lists.
+• Using a dictionary comprehension, you calculate the average score for each student by summing the
+scores and dividing by the number of scores.
+• The result is {'alice': 90.0, 'bob': 80.0}.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+1. Dictionary
+
+Dictionary Comprehension
+• Example 3: Handling Values as Tuples or Lists
+
+student_grade2 = {'alice': (100, 90, 80), 'bob': (90, 70)}
+subject_ave2 = {k: sum(v)/len(v) for k, v in student_grade2.items()}
+student_grade3 = {'alice': (100, 90, 80), 'bob': [90, 70]}
+subject_ave3 = {k: sum(v)/len(v) for k, v in student_grade3.items()}
+• These examples are like Example 2 but show that you can use dictionary comprehension with values
+stored as either tuples or lists.
+• The code iterates through the dictionary items and calculates the average score for each student.
+• Regardless of whether the values are tuples or lists, the result is {'alice': 90.0, 'bob': 80.0} in
+both cases.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+1. Dictionary
+
+Summary
+• Key-Value Pairs: Dictionaries store data as pairs of keys and values, making data
+retrieval efficient.
+• Define and Access: Dictionaries are created using curly braces and data is accessed by
+specifying keys.
+• Modify: Dictionaries are mutable; you can update values, add new pairs, or remove
+existing ones.
+• Compare: Comparing dictionaries allows you to check if they have the same key-value
+pairs, regardless of the order. This is useful for data validation.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+2. Set
+
+A set is a mutable, unordered collection of unique values.
+• It is defined using curly braces {} or the set() constructor .
+• Key characteristics include:
+•
+•
+•
+•
+
+No specific order is guaranteed.
+No indexing or slicing is available.
+The display order can differ from the adding order.
+Sets are mutable and may contain only immutable objects, like strings, ints, floats
+and tuples that contain only immutable elements.
+
+• Unique Values:
+
+• Values in a set can be of various types, including strings, integers, floats, and tuples.
+Duplicate values are automatically eliminated.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+2. Set
+
+A set examples:
+number1 = {1, 2, (3, 4), {2, 3}}
+
+# Error - sets cannot contain sets
+
+number2 = {1, 2, 3, 4, 3, 4}
+
+# {1, 2, 3, 4} - duplicates are removed
+
+number1 == number2
+
+# False
+
+len(number2)
+
+# 4
+
+len(number1)
+
+# Error
+
+1 in number2
+
+# True
+
+5 in number2
+
+# False
+
+number3 = set(range(1, 5))
+
+# {1, 2, 3, 4}
+
+for num in number2:
+print(f'{num} ', end='')
+10. Dictionaries and Sets
+
+# 1 2 3 4
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+2. Set
+
+Sets are mutable:
+# Creating a set of strings
+my_set = {'apple', 'banana', 'cherry’}
+# Attempting to access an element using indexing (this will raise an error)
+my_set[0] = 'orange' # This line will raise a TypeError
+# Adding a new element to the set
+my_set.add('orange')
+# Removing an element from the set
+my_set.remove('cherry')
+# Printing the updated set
+print(my_set) # Output: {'banana', 'apple', 'orange'}
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+2. Set
+
+Empty Set vs. Empty Dictionary
+# Empty Dictionary
+empty_dict = {'key': 2}
+
+# {'key': 2} <- Create a dictionary named 'empty_dict'
+
+empty_dict.clear()
+
+# {} <- Make it empty
+
+# Empty Set
+empty_set1 = {}
+
+# {} <- Cannot create an empty set like this, it
+actually an empty dictionary.
+
+is
+
+# Be careful with Empty Set and Empty Dictionary
+empty_set2 = set()
+
+# set() <- Must create an empty set like this (to avoid
+confusion)
+
+# Checking the results
+empty_dict == empty_set1
+
+# TRUE (both are empty and are dictionaries)
+
+empty_set1 == empty_set2
+
+# FALSE (empty_set1 is a dictionary, empty_set2 is a set)
+
+empty_dict == empty_set2
+
+# FALSE (empty_dict is an empty dictionary, and empty_set2
+is an empty set)
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+2. Set
+
+frozenset – An immutable Set Type
+• (Recall) Sets are mutable, you can only add immutable elements to a set.
+• If you want to add a set as an element, convert the set from mutable to immutable
+using the built-in frozenset function.
+
+• A frozenset in Python is an unchangeable set. Once you create it, you can't add, remove, or alter its
+elements.
+• A frozenset ensure data stability by being unchangeable and suitable for collections of unique
+elements in Python.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+2. Set
+
+• frozenset Examples:
+number4 = {1, [2, 3], 4}
+
+# ERROR: unhashable type: 'list'
+
+number5 = {1, (2, 3), 4}
+
+# {1, (2, 3), 4}
+
+number6 = {9, 7}
+
+# {9, 7}
+
+# Mutable set
+
+number7 = frozenset(number6) # frozenset({9, 7})
+
+# Immutable set
+
+number8 = {1, 2, number6, 3} # ERROR: unhashable type: 'set'
+number9 = {1, 2, number7, 3} # {1, 2, 3, frozenset({9, 7})}
+{9, 7} in number9
+
+# True (no specific order)
+
+{7, 9} in number9
+
+# True (no specific order)
+
+frozenset({9, 7}) in number9 # True (no specific order)
+frozenset({7, 9}) in number9 # True (no specific order)
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+2. Set
+
+• frozenset Real world example:
+# Define user permissions as frozensets
+admin_permissions = frozenset({'create', 'read', 'update', 'delete'})
+guest_permissions = frozenset({'read'})
+# Create a dictionary to map users to their permissions
+user_permissions = {'admin': admin_permissions,'guest': guest_permissions}
+def check_permission(user, action):
+# Checking user permissions
+if user in user_permissions and action in user_permissions[user]:
+return True
+else:
+return False
+# Usage example
+user = 'admin'
+action = 'update’
+if check_permission(user, action):
+print(f"{user} is allowed to {action} data.")
+else:
+print(f"{user} is not allowed to {action} data.")
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+2. Set
+
+Sets Comparison and Mathematical Set Operations
+• Operations that give True/False or new Set
+• Comparing Sets
+• Equality (Equal)
+• Subset
+• Superset
+
+• Mathematical Set Operations
+•
+•
+•
+•
+•
+
+Union
+Intersection
+Difference
+Symmetric Difference
+Disjoint
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+2. Set
+
+Sets Comparison and Mathematical Set Operations
+# EQUAL – True if two sets have identical values.
+{1, 2, 3} == {3, 2, 1}
+# True
+{1, 2, 3} != {3, 2, 1}
+# False
+# SUBSET – True if another set contains this set.
+{1, 2, 3}.issubset({3, 2, 1})
+# True
+{1, 2, 3} < {3, 2, 1}
+# False: '<' means proper subset
+{1, 2, 3} < {3, 2, 1, 0}
+# True
+{1, 2, 3} <= {3, 2, 1}
+# True: '<=' means improper subset
+# SUPERSET – True if this set contains another set.
+{3, 2, 1}.issuperset({1, 2, 3}) # True
+{3, 2, 1} > {1, 2, 3}
+# False: '>' means proper superset
+{3, 2, 1, 0} > {1, 2, 3}
+# True
+{3, 2, 1} >= {1, 2, 3}
+# True: '>=' means improper superset
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+2. Set
+
+Sets Comparison and Mathematical Set Operations
+• The union of two sets, denoted by A ∪ B, creates a new set that contains all unique elements from both
+sets A and B. It combines elements from both sets without duplication.
+# UNION - The union of sets as a new set.
+{1, 2, 3}.union({3, 2, 1, 0})
+# {0, 1, 2, 3}
+{1, 2, 3} | {3, 2 , 1, 0}
+# {0, 1, 2, 3}
+
+• The intersection of two sets, denoted by A ∩ B, results in a new set containing only the elements that are
+common to both sets A and B. It selects elements that are shared between the sets.
+# INTERSECTION - The intersection of two sets as a new set.
+{1, 2, 3}.intersection({3, 2, 0})
+# {2, 3}
+{1, 2, 3} & {3, 2, 0}
+# {2, 3}
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+33
+
+2. Set
+
+Sets Comparison and Mathematical Set Operations
+
+• The difference between two sets, denoted by A - B, forms a new set that includes elements from set A that are
+not found in set B. It removes elements that are common to both sets.
+# DIFFERENCE - The difference between two or more sets as a new set.
+{1, 2, 3}.difference({3, 4, 0})
+# {1, 2}
+{1, 2, 3} - {3, 4, 0}
+# {1, 2}
+
+• The symmetric difference between two sets, denoted by A ^ B, creates a new set containing elements that are
+exclusive to either set A or set B, but not both. It selects elements that are unique to each set.
+# SYMMETRIC DIFFERENCE - The symmetric difference between two sets as a new set.
+{1, 2, 3}.symmetric_difference({3, 4, 5})
+# {1, 2, 4, 5}
+{1, 2, 3} ^ {3, 4, 5}
+# {1, 2, 4, 5}
+
+• Two sets are considered disjoint if their intersection is an empty set, meaning they have no common
+elements. If sets A and B are disjoint, it returns True; otherwise, it returns False.
+# DISJOINT - True if two sets have a null intersection.
+{1, 2, 3}.isdisjoint({5, 6 ,7})
+# True
+{1, 2, 3}.isdisjoint({1, 5, 6 ,7})
+# False
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+34
+
+2. Set
+
+Mutable Set Operators and Methods
+• Updating Sets:
+•
+•
+•
+•
+
+Union Update: Adds elements from another set.
+Intersection Update: Keeps common elements.
+Difference Update: Removes elements from another set.
+Symmetric Diff. Update: Keeps unique elements.
+
+• Managing Elements:
+
+• Add: Adds an element.
+
+• Removing Elements:
+
+• Remove/Discard: Deletes an element; remove raises an error if the element is not present, while
+discard does not.
+
+• Clearing the Set:
+
+• Clear: Empties the set.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+35
+
+2. Set
+
+Mutable Set Operators and Methods
+# UNION UPDATE
+numbers = {1, 2}
+numbers.update({3, 4})
+numbers |= {5, 6}
+
+# {1, 2}
+# {1, 2, 3, 4}
+# {1, 2, 3, 4, 5, 6}
+
+# INTERSECTION UPDATE
+numbers.intersection_update({2, 3, 4, 6, 8})
+numbers &= {2, 4, 6, 8}
+
+# {2, 3, 4, 6}
+# {2, 4, 6}
+
+# DIFFERENCE UPDATE
+numbers.difference_update({2, 5, 8})
+numbers -= {6}
+
+# {4, 6}
+# {4}
+
+# SYMMETRIC DIFFERENCE UPDATE
+numbers = {1, 2, 3, 4, 5}
+numbers.symmetric_difference_update({3, 4, 5, 6, 7})
+numbers ^= {3, 4, 6, 7}
+
+# {1, 2, 6, 7}
+# {1, 2, 3, 4}
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+36
+
+2. Set
+
+Mutable Set Operators and Methods
+# ADD – Add a new element to the existing set
+numbers.add(5)
+# {1, 2, 3, 4, 5}
+# REMOVE – Report an error if the specified element is not found
+numbers.remove(1)
+# {2, 3, 4, 5}
+numbers.remove(10)
+# ERROR - KeyError: 10 <- no element found
+# DISCARD - Report NO error if the specified element is not found
+numbers.discard(2)
+# {3, 4, 5}
+numbers.discard(10)
+# {3, 4, 5} NO ERROR REPORT
+# POP – Remove a random element
+numbers.pop()
+# {4, 5}
+# Even though 3 is removed, you can't know which element will be
+# removed because the set has no order
+# CLEAR – Clear set
+numbers.clear()
+10. Dictionaries and Sets
+
+# set() <- empty set
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+37
+
+2. Set
+
+Set Comprehensions
+• Ways of creating a new Set from the existing one
+• Standard Format: name = {v for v in set}
+words = {'today', 'is', 'a', 'good', 'day'}
+newWords = {word for word in words} # {'good', 'day', 'a', 'today', 'is'}
+newWords = {word.capitalize() for word in words} # {'Is', 'Day', 'Good', 'A', 'Today'}
+newWords = {word for word in words if len(word)>2}
+
+10. Dictionaries and Sets
+
+# {'good', 'today', 'day'}
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+38
+
+Summary
+
+Understand and be able to work with Dictionaries and Sets
+• Unordered Data Types:
+• Dictionary and Set
+
+• Dictionary:
+
+• key-value pairs
+• Keys must be unique and immutable, while values can be of any type.
+
+• Set
+
+• Collections of unique values with no specific order.
+• Sets are mutable, allowing for element addition and removal.
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+39
+
+Assignment
+
+Do the 10th assignment
+• Details will be given in the class
+
+10. Dictionaries and Sets
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+40
+
+

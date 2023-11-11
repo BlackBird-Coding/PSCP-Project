@@ -1,0 +1,975 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 06
+Function
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+•
+•
+•
+•
+•
+
+Introduction to Functions in Python
+Void Functions
+Designing Programs Using Functions
+Passing Arguments and Variable Scope
+Value-Returning Functions
+
+6. Function
+
+• Comprehend the concept and significance of
+functions in Python.
+• Implement modular design by using both void and
+value-returning functions.
+• Construct programs that effectively utilize function
+arguments.
+• Manage local and global variables to optimize
+code structure and behavior.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Introduction to Functions
+
+Introduction to Functions
+
+CONCEPT: A function is a set of commands in a program to perform a specific task.
+Programs often break tasks into smaller subtasks and use manageable functions for each.
+These functions execute specific statements and are then run in sequence to accomplish the
+overall task.
+Without Function
+
+With Function
+
+# student 1
+id1_score = 85
+id1_max_score = 100
+id1_grade = (id1_score / id1_max_score) * 100
+
+def calculate_grade(score, max_score):
+grade = (score / max_score) * 100
+return grade
+
+# student 2
+id2_score = 92
+id2_max_score = 100
+id2_grade = (id2_score / id2_max_score) * 100
+
+sub1_grade = calculate_grade(85, 100)
+sub2_grade = calculate_grade(92, 100)
+print("Subject 1 Grade:", sub1_grade)
+print("Subject 2 Grade:", sub2_grade)
+
+print(“Student 1 Grade:", id1_grade)
+print(“Student 2 Grade:", id2_grade)
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Introduction to Functions
+
+Benefits of Using Functions in Program Modularization
+
+Simplicity: Functions make code easier to understand by breaking it into manageable parts.
+Reuse: Functions prevent code repetition, allowing common operations to be written once and
+used multiple times.
+Testing: Isolating tasks in functions simplifies testing and error correction.
+Efficiency: Functions speed up development by enabling code sharing across multiple
+programs.
+Teamwork: Functions facilitate collaboration, with different programmers focusing on specific
+tasks.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Introduction to Functions
+
+Two Types of Function: Void Functions and Value-Returning Functions
+Void Functions:
+
+When you call a void function, it carries out the contained statements and then ends.
+It doesn't give back any result, focusing on executing actions.
+Void functions are useful for tasks like printing, logging, or updating data.
+
+Value-Returning Functions:
+
+When you call a value-returning function, it performs the statements it holds and then returns a value
+to the calling statement.
+The input() function is an example of a value-returning function. It gathers user input and returns it
+as a string.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+2. Void Function
+
+Defining and Calling a Void Function
+
+CONCEPT: When you create a function, its code is called a function definition. To make the
+function run, you use a statement that calls it.
+This section covers:
+Function Names: Guidelines for naming functions effectively.
+Defining and Calling a Function: How to create and use functions.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+2. Void Function
+
+Defining and Calling a Void Function
+Function Names:
+
+Function names are like labels for functions, similar to how you name variables in a program.
+Descriptive function names help others understand the purpose of the function just by reading the code.
+Python's rules for naming functions are similar to those for naming variables:
+ no reserved keywords, no spaces/dots, start with letter/underscore, and case-sensitive.
+
+To convey the function's action, it's common to use verbs in function names.
+Examples of well-named functions:
+calculate_gross_pay
+get_pay_rate
+print_check
+
+6. Function
+
+Reserved keywords:
+
+and, as, assert, break, class, continue, def, del,
+elif, else, except, False, finally, for, from, global,
+if, import, in, is, lambda, None, nonlocal, not, or,
+pass, raise, return, True, try, while, with, yield.
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. Void Function
+
+Defining and Calling a Void Function
+
+Defining and Calling a Function: Defining a function
+
+Creating a Function: A function is defined using a specific structure.
+Format: Function definition follows:
+def function_name():
+””” docstring ”””
+statement
+statement
+etc.
+
+Function Header: Begins with def, function name, parentheses, and colon.
+Statement Block: Follows the header, contains statements executed when the function is called.
+Indentation: Statements in the block are indented to define the function's scope.
+A docstring is a quick explanation inside code to describe what a function or part does.
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. Void Function
+
+Defining and Calling a Void Function
+
+Defining and Calling a Function: Calling a function
+
+Function definitions describe what a function does; calling it triggers execution.
+Use function_name() to call a function.
+Interpreter moves to the function, executes its block, then returns to the calling point.
+This process is known as function returns.
+For example:
+# Defining the function
+def message():
+print('I am Arthur,’)
+print('King of the Britons.')
+# Calling the function
+message()
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+3. Designing Programs Using Functions
+
+Designing a Program to Use Functions
+
+CONCEPT: Programmers often use Top-Down design to decompose algorithms into functions.
+Top-Down Design: breaking algorithms into functions through these steps:
+1. Divide the main task into sequential subtasks.
+2. Continuously break subtasks into smaller ones, if possible.
+3. Translate identified subtasks into code.
+def main():
+print('I have a message for you.')
+message()
+print('Goodbye!')
+def message():
+print('I am Arthur,')
+print('King of the Britons.')
+# Calling the main function
+main()
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+3. Designing Programs Using Functions
+
+Designing a Program to Use Functions
+
+Flowcharts explain what's inside a function, but not how functions connect to each other.
+To show these connections, programmers often use hierarchy charts (or structure chart).
+A hierarchy chart shows functions as boxes, connected to show function calls.
+For example, the chart shows the main function on top, connecting to five functions:
+
+and calc_net_pay.
+calc_withholdings also uses calc_taxes and calc_benefits.
+
+ get_input, calc_gross_pay, calc_overtime, calc_withholdings,
+ get_input
+
+triggers get_hours_worked and get_hourly_rate.
+
+The hierarchy chart doesn't show how functions work; it can't replace flowcharts or pseudocode.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+3. Designing Programs Using Functions
+
+Designing a Program to Use Functions
+Hierarchy chart example:
+
+The main() function is at the top. It calls the get_input() then calls the display_output() function.
+def get_input():
+main()
+
+print(“A. Getting user input.")
+def display_output():
+print(“B. Displaying output.")
+
+get_input()
+
+display_output()
+
+def main():
+print("main-1. Starting the program.")
+
+# Program Output
+main-1. Starting the program.
+A. Getting user input.
+B. Displaying output.
+main-2. Program ended.
+6. Function
+
+get_input()
+display_output()
+print("main-2. Program ended.")
+# Calling the main function
+main()
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions
+
+CONCEPT: An argument refers to data provided to a function during its call, while a parameter
+is a variable within the function that accepts and holds the argument passed to it.
+Functions utilize input data called arguments for calculations and operations.
+Functions require parameter variables to receive and hold argument values during calls.
+def show_double(number):
+result = number * 2
+print(result)
+# Call the function
+value = 5
+show_double(value)
+# Program Output
+10
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Local Variables
+
+A local variable is created inside a function and can't be accessed outside it. Different functions
+can share local variable names since they can't see each other's variables.
+Assigning a value in a function creates a local variable. It stays inside that function; only its
+statements can use it.
+Accessing a local variable from another function causes an error.
+def func1():
+var_func1 = 10 # var_func1 is a local variable that can be used only inside this function
+print("Inside function1, variable 1:", var_func1)
+
+def func2():
+print("Inside function2, variable 1:", var_func1)
+func1()
+func2()
+6. Function
+
+# This line will cause an error
+
+# Calling this function will cause an error because is tries to access var_func1
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Local Variables – More Examples
+def greet(name):
+# Local variable
+greeting = "Hello, " + name
+print(greeting)
+
+def calculate_area(radius):
+pi = 3.14159 # Local variable for pi
+area = pi * radius * radius
+print("Circle area:", area)
+
+def farewell():
+print(greeting) # This line will cause
+an error because greeting is not defined in
+this scope
+
+def calculate_circumference(radius):
+circumference = 2 * pi * radius
+print("Circle circumference:", circumference)
+
+# Calling functions
+greet("Alice")
+farewell()
+
+# Calling functions
+r = 5
+calculate_area(r)
+calculate_circumference(r)
+
+# Program Output
+NameError: name 'greeting' is not defined ,
+in farewell() function
+
+# Program Output
+NameError: name 'pi' is not defined, in
+calculate_circumference() function
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Passing Multiple Arguments
+
+Passing multiple arguments involves providing several data pieces in a function call.
+Arguments, separated by commas, match function parameters and enable calculations.
+The order of arguments must match the order of parameters in the function definition.
+
+Example:
+
+def show_sum(num1, num2):
+result = num1 + num2
+print(result)
+# Call the function
+show_sum(12, 45) # Output is 57
+show_sum(45, 12) # Output is 57
+
+Even if the output is the same, the order of parameters matters, see next example.
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Passing Multiple Arguments (Positional)
+More Example
+
+def display_name(first, last):
+print(f"{first}, {last}")
+name = "Christopher"
+family_name = "Nolan“
+# Call the function
+display_name(name, family_name) # Output is “Christopher, Nolan”
+display_name(family_name, name) # Output is “Nolan, Christopher”
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Making Changes to Parameters
+
+If you provide an argument to a function, the parameter variable points to its value. However,
+any changes to the variable inside the function won’t change the original argument’s value.
+
+def change_me(arg):
+print('I am changing the value.')
+arg = 0
+print(f'Now the value is {arg}. The arg\'s value is changed inside change_me() only.’)
+# Calling function
+value = 99
+print(f'The value is {value}.\n')
+change_me(value)
+print(f'Back in main the value is {value}.’)
+# Program Output
+The value is 99.
+I am changing the value.
+Now the value is 0. The arg's value is changed inside change_me() only.
+Back in main the value is 99.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Keyword Arguments
+
+Normal arguments need a fixed order for values, risking mistakes.
+Mixing up parameter positions can result in errors.
+In contrast, keyword arguments use names to assign values, making function calls clearer.
+This enhances clarity and flexibility, improving code readability and maintenance.
+def display_info(name, country):
+print("Name:", name, ":", end=" ")
+print("Country:", country)
+
+# Using keyword arguments to call the function
+display_info(name="Somchai", country="Thailand")
+display_info(country="Japan", name="Nobita")
+# Program Output
+Name: Somchai : Country: Thailand
+Name: Nobita : Country: Japan
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+4. Passing Arguments and Variable Scope
+
+Passing Arguments to Functions: Mixed Keyword with Positional Arguments
+def book_flight(destination, departure, return_date):
+print("Destination:", destination)
+print("Departure:", departure)
+print("Return Date:", return_date)
+
+# Using mixed arguments
+book_flight("Paris", departure="2023-08-15", return_date="2023-08-25")
+book_flight("Tokyo", "2023-09-10", return_date="2023-09-20")
+# Program Output
+Destination: Paris
+Departure: 2023-08-15
+Return Date: 2023-08-25
+Destination: Tokyo
+Departure: 2023-09-10
+Return Date: 2023-09-20
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+4. Passing Arguments and Variable Scope
+
+Global Variables and Global Constants: Global Variables
+
+CONCEPT: A global variable can be accessed by all functions within a program file.
+Variables inside functions (created by assignments) are local, limited to that function.
+Variables outside functions (created by assignments) are global, accessible by all statements in
+the program file, including functions.
+my_value = 10
+
+# global variable
+
+def show_value():
+print(my_value)
+# Call the show_value function.
+show_value()
+print(my_value)
+# Program Output
+10 # inside the function
+10 # outside the function
+6. Function
+
+my_value = 10
+
+# global variable
+
+def show_value():
+my_value = 99 # local variable
+print(my_value)
+# Call the show_value function.
+show_value()
+print(my_value)
+# Program Output
+99 # inside the function
+10 # outside the function
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+4. Passing Arguments and Variable Scope
+
+Global Variables and Global Constants: Caution with Global Variables
+
+Confusion and troubleshooting: Changes can confuse and complicate troubleshooting.
+Reusability and collaboration: Global variables limit reusability and can lead to conflicts in
+collaboration.
+Limit global variables, try passing arguments or using local variables as alternatives.
+total_sales = 0
+
+# Global variable
+
+total_sales = 0
+
+# Global variable sales
+
+def add_sale(amount):
+# Accessing global variable
+global total_sales
+total_sales = total_sales + amount
+
+def add_sale(amount):
+# Accessing global variable
+# global total_sales
+total_sales = total_sales + amount
+
+add_sale(100)
+add_sale(200)
+print("Total sales:", total_sales)
+
+add_sale(100)
+add_sale(200)
+print("Total sales:", total_sales)
+
+# Program Output
+Total sales: 300
+
+# Program Output
+# Error: total_sales is created as local variable
+and used before creation.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+4. Passing Arguments and Variable Scope
+
+Global Variables and Global Constants: Global Constants
+
+CONCEPT: A global constant is a named value that remains unchanged throughout a program
+and can be accessed from anywhere in the code.
+Global constants reference values that remain unchangeable.
+PI = 3.14159
+
+# Global constant for pi
+
+TAX_RATE = 0.08
+
+# Global constant for tax rate
+
+def calculate_area(radius):
+area = PI * radius * radius
+print("Circle area:", area)
+
+def calculate_total(price):
+total = price + (price * TAX_RATE)
+print("Total with tax:", total)
+
+circle_radius = 5
+calculate_area(circle_radius)
+
+item_price = 100
+calculate_total(item_price)
+
+# Program Output
+Circle area: 78.53975
+
+# Program Output
+Total with tax: 108.0
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+5. Value-Returning Functions
+
+Value-Returning Functions
+
+CONCEPT: A value-returning function uses a return statement to send a value back to the
+calling part of the program.
+To create a value-returning function, use the same structure as a void function.
+Include a return statement in the function, which sends a specific value back to the calling part
+of the program.
+def function_name():
+statement
+statement
+etc.
+return expression
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+5. Value-Returning Functions
+
+Value-Returning Functions
+Example
+
+def sum(num1, num2):
+result = num1 + num2
+return result
+first_age = 22
+second_age = 24
+# Call a function
+total = sum(first_age, second_age)
+print(f"The total is {total}.")
+# Program Output
+The total is 46.
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+5. Value-Returning Functions
+
+Value-Returning Functions
+Example: Online Store Sale
+
+You're building an online store application that calculates sale prices for items. When customers input the
+regular price of an item, your program should apply a 20% discount and show the final sale price.
+
+Problem: Calculate Sale Price
+
+Your task is to create a function that takes the regular price as input, applies the discount, and displays the
+sale price.
+
+Use case example
+
+Enter the item's regular price: 50
+The sale price is $40.00.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+5. Value-Returning Functions
+
+Pseudo Code
+
+Set DISCOUNT_PERCENTAGE to 0.20.
+Function calculate_sale_price(regular_price):
+Get regular_price from user input.
+Calculate sale_price as regular_price - (regular_price * DISCOUNT_PERCENTAGE).
+Return sale_price.
+Call calculate_sale_price() with user input for regular_price.
+Display the sale price using print() with currency formatting.
+
+ Python Solution
+
+DISCOUNT_PERCENTAGE = 0.20
+def get_regular_price():
+price = float(input("Enter the item's regular price: "))
+return price
+def discount(price):
+return price * DISCOUNT_PERCENTAGE
+# Call the functions.
+reg_price = get_regular_price()
+sale_price = reg_price - discount(reg_price)
+print(f'The sale price is ${sale_price:,.2f}.')
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+5. Value-Returning Functions
+
+Value-Returning Functions: Returning Strings
+
+In addition to returning numbers, functions can also return strings and even formatted output.
+For instance, the get_name() function prompts the user for their name and returns the entered
+string:
+def get_name():
+name = input('Enter your name: ')
+return name
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+5. Value-Returning Functions
+
+Value-Returning Functions: Returning Boolean Values
+
+Boolean functions return True or False.
+Useful for simplifying complex conditions in decision and repetition structures.
+For example, determining if a number is even or odd.
+def is_even(number):
+return (number % 2) == 0
+number = int(input('Enter a number: '))
+if is_even(number):
+print('The number is even.')
+else:
+print('The number is odd.’)
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+5. Value-Returning Functions
+
+Value-Returning Functions: Returning Multiple Values
+Value-returning functions can return multiple values.
+Syntax: return expression1, expression2,
+
+etc.
+
+def get_name():
+first = input('Enter your first name: ')
+last = input('Enter your last name: ')
+return first, last
+first_name, last_name = get_name()
+
+Function returns two values: first and last.
+Values are assigned to variables on the left side of the `=` operator.
+Number of variables must match the number of returned values.
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+5. Value-Returning Functions
+
+Value-Returning Functions: Standard Library Functions and the import Statement
+Python has a library of built-in functions that simplify common tasks.
+Library functions can be part of the Python interpreter or stored in modules.
+Modules group related functions, like math operations in the math module.
+To use module functions, you import the module with an import statement.
+Importing a module makes its functions available for use in your program.
+Library functions are often seen as black boxes, handling input to produce output.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+5. Value-Returning Functions
+
+Python Standard Library – Built-in Functions
+
+Importing modules allows access to Python's standard library functions.
+Popular standard library modules include
+ import math
+ import random
+ import tensorflow
+ import numpy
+ import matplotlib
+ import os
+ import string
+
+# Common math constants and operations
+# Pseudorandom numbers
+# TensorFlow – open-source library for Machine Learning and AI
+# Large collection of high-level mathematical functions
+# Plotting library for the Python
+# Interacting with the operating system
+# String processing
+
+These modules provide functions for math operations, pseudorandom numbers, machine
+learning, mathematical functions, plotting, operating system interaction, and string processing.
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+33
+
+5. Value-Returning Functions
+
+Generating Random Numbers
+
+Random numbers are valuable for games, simulations, statistics, and security.
+Import with import random, the randint() function generates random integers.
+import random
+number = random.randint(1, 100)
+print(number)
+# Output can be any number between 1 and 100
+
+ For instance, looping 5 times to print a random number between 1 and 100.
+def random_number():
+for count in range(5):
+print(random.randint(1, 100))
+
+random_number()
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+34
+
+5. Value-Returning Functions
+
+Generating Random Numbers: randrange, random, and uniform
+
+randrange Function: It returns a random value from a specified range.
+number = random.randrange(10)
+
+randrange Function with Range: You can define a start and end value.
+number = random.randrange(5, 10)
+
+randrange Function with Step: Specify a step value for intervals.
+number = random.randrange(0, 101, 10)
+
+random Function: Generates a random floating-point number between 0.0 (inclusive) and 1.0
+(exclusive).
+number = random.random()
+
+uniform Function: Returns a random floating-point number within a given range.
+number = random.uniform(1.0, 10.0)
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+35
+
+5. Value-Returning Functions
+
+Generating Random Numbers: Random Number Seeds and Reproducibility:
+
+Pseudorandom Nature: Random module generates numbers using a formula based on an initial
+seed.
+System Time Seed: Importing random uses system time as seed, yielding different sequences.
+Consistent Sequences: Use `random.seed()` to set a fixed seed for the same sequence.
+Reproducibility: Identical seed values produce the same sequence across runs.
+import random
+random.seed(10)
+n1 = random.randint(1, 100)
+n2 = random.randint(1, 100)
+print(f"n1 = {n1}, n2 = {n2}")
+
+# Output is n1 = 74, n2 = 5
+
+import random
+random.seed(10)
+n3 = random.randint(1, 100)
+n4 = random.randint(1, 100)
+print(f"n3 = {n3}, n4 = {n4}")
+
+# Output is n3 = 74, n4 = 5
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+36
+
+Summary
+
+Understand and able to work with Functions in Python
+Introduction to Functions:
+
+Understand the purpose and benefits of using functions in programming.
+
+Void Functions:
+
+Create and use void functions to perform specific tasks.
+
+Designing Programs with Functions:
+
+Apply a modular programming approach for organized and maintainable programs.
+
+Passing Arguments and Variable Scope:
+
+Learn to pass arguments to functions and understand variable scope.
+
+Value-Returning Functions:
+
+Develop value-returning functions to enhance program functionality.
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+37
+
+Assignment
+
+Do the 6th Assignment
+
+Detail is given in the Classroom
+
+6. Function
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+38
+
+

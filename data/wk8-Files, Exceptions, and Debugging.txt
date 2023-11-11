@@ -1,0 +1,1352 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 08
+Files, Exceptions, and Debugging
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1.
+2.
+3.
+4.
+5.
+
+Introduction to File Handling
+Iterative File Processing
+Error Handling with Try/Except
+CSV Data Manipulation
+Fixing code errors with the debugging process.
+
+8. Files, Exceptions, and Debugging
+
+1. File Basics: Introduction to file handling in Python.
+2. Looping through Files: Efficiently process data
+using loops.
+3. Error Handling: Handle errors using try/except.
+4. CSV Manipulation: Read and write CSV files for
+tabular data.
+5. Solving Code Errors with Debugging.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Introduction to File Handling
+
+Python Data Storage and File Handling
+Temporary Storage:
+
+ Variables, lists, dictionaries, etc.
+ Data lost when local variable scope ends or program terminates
+
+Long-Term Retention:
+
+ Files provide persistent data storage
+ Data remains even after program termination
+ Stored on various secondary storage devices (e.g., SSDs, hard disks)
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Introduction to File Handling
+
+Introduction to File Input and Output (I/O)
+
+Concept: Saving (Writing) and Retrieving Data (Reading)
+ Programs save data in files for later use.
+ Data can be read from files for future processing.
+
+Need for File I/O
+
+ Programs lose data stored in RAM when they stop running.
+ To retain data between runs, it must be saved in files on disk.
+
+Examples of Software Using Files
+
+ Word Processors: Documents saved in files for editing and printing.
+ Image Editors: Edited graphics and images saved in files.
+ Spreadsheets: Numerical data and formulas stored in files.
+ Games: Player scores, progress, and settings saved in files.
+ Web Browsers: Cookies store browsing session information.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Introduction to File Handling
+
+Writing: Data Storage in Files
+
+Programmers term it "writing data" when saving in files.
+Data copied from RAM variable to the file.
+Output file: Where data is written; holds program output.
+
+Writing data to a file
+8. Files, Exceptions, and Debugging
+
+Starting Out with Python, 5th edition, Tony Gaddis
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Introduction to File Handling
+
+Reading: Retrieving Data from Files
+
+Reading Data: Extracting data from files.
+Data is copied from file to RAM, referenced by variables.
+Input Files: Files supplying program input.
+
+Reading data from a file
+8. Files, Exceptions, and Debugging
+
+Starting Out with Python, 5th edition, Tony Gaddis
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+1. Introduction to File Handling
+
+Using files in a program involves three essential steps:
+1. Opening the File
+
+ Establishes a connection between the program and the file.
+ For output files, it creates the file on disk for data writing.
+ For input files, it permits reading data from the file.
+
+2. Processing the File
+
+ Involves writing data to the file (for output) or reading data from the file (for input).
+
+3. Closing the File
+
+ After usage, the file must be closed.
+ Closing disconnects the file from the program.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+1. Introduction to File Handling
+
+Types of Files: Text and Binary
+There are two main file types: text and binary.
+
+Text Files: Contain text-encoded data (e.g., ASCII, Unicode).
+ Even numbers are stored as characters.
+ Viewable in text editors like Notepad.
+
+Binary Files: Hold non-textual data.
+ Data meant for program consumption.
+ Not viewable in text editors.
+
+We focus on text files in this course, allowing file inspection using editors.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+1. Introduction to File Handling
+
+File access methods come in two types: sequential and direct.
+Sequential Access:
+
+ Data read from beginning to end.
+ No direct access to specific data.
+ Comparable to older cassette tape players.
+
+Direct Access (Random Access):
+
+ Allows jumping directly to any data.
+ Doesn't require reading preceding data.
+ Comparable to CD or MP3 players.
+
+We focus on sequential access files, which is useful for learning basic file operations.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+1. Introduction to File Handling
+
+Filenames and File Objects
+Filename Identification:
+
+ File Association: Files linked to filenames.
+ User Involvement: Naming while saving docs.
+ OS Regulations: Naming rules by systems.
+
+Filename Extensions Explained:
+
+ Definition: Sequences after a dot in filenames.
+ Type Indication: e.g., .jpg, .txt, .doc.
+ Content Suggestion: Image, text, Word document.
+
+File Objects and Interaction:
+
+ File Objects: Created in memory for files.
+ Interaction: Linked to specific files, enabling operations.
+ Variable Usage: References object for file tasks.
+
+8. Files, Exceptions, and Debugging
+
+Starting Out with Python, 5th edition, Tony Gaddis
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+1. Introduction to File Handling
+
+Opening a File
+
+Using the open function:
+
+ Creates a file object linked to a disk file.
+ Format: file_variable = open(filename,
+
+mode)
+
+Format breakdown:
+
+: References the file object.
+ filename : String specifying the file's name.
+ mode : String specifying file's mode (e.g., reading, writing).
+ file_variable
+
+Modes:
+
+ r : Read-only mode, file content cannot be changed.
+ w : Write mode, create/overwrite file.
+
+ a : Append mode, write data at file's end.
+
+Examples:
+
+ Reading customers.txt: customer_file = open('customers.txt',
+ Writing sales.txt: sales_file = open('sales.txt', 'w')
+8. Files, Exceptions, and Debugging
+
+'r')
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+1. Introduction to File Handling
+
+File Location Specification
+Default Location:
+
+ If no path specified, assumes same as program, C:\Users\UserName\Documents\Python
+
+ Using VS Code on Windows, the location might be C:\Users\UserName\AppData\Local\Programs\Microsoft VS Code\
+ Or the file is saved in the folder where you saved the .ipynb file.
+
+Different Location:
+
+ Specify path and filename in open function.
+ Use `r` prefix for raw string, especially on Windows.
+
+Example:
+
+ Creating in specific folder:
+ test_file = open(r'C:\Users\UserName\temp\test.txt', 'w’)
+
+ Creates test.txt in C:\Users\UserName\temp.
+
+ Raw string (r) ensures backslashes are treated as literal.
+
+ On Windows, without using (r), you might have to use it like this: test_file
+
+8. Files, Exceptions, and Debugging
+
+= open(C:\\Users\\UserName\\temp\\test.txt', 'w’)
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+1. Introduction to File Handling
+
+Writing Data to a File
+Introduction to Methods:
+
+ Methods are functions belonging to objects.
+ Used for operations on objects.
+
+File Object Methods:
+
+ File objects have methods for operations.
+ write() method writes data to a file.
+ Format: file_variable.write(string).
+ String is written to the file.
+
+Example:
+ Writing to file:
+
+ customer_file.write('Charles Pace')
+ customer_file.write(name)
+
+ Closing file:
+ customer_file.close()
+
+Closing a File:
+
+ After operations, close the file.
+ Disconnects program from file.
+ Prevents data loss, flushes buffer.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+1. Introduction to File Handling
+
+Writing to File Example
+
+File Opening and Object Creation:
+
+ Line 1: Opens philosophers.txt in 'w' mode.
+ Creates file object as outfile.
+
+Writing Data (Lines 4-6):
+
+ Line 4: Writes 'John Locke\n'.
+ Line 5: Writes 'David Hume\n'.
+ Line 6: Writes 'Edmund Burke\n'.
+
+Closing the File:
+
+ Line 9: Closes the file.
+
+Note: Newline \n formats each item
+on separate lines in the file.
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+1. Introduction to File Handling
+
+Writing to File Example: Concatenating Newlines
+Adding \n to user-entered data before writing to the file.
+Ensuring new lines for each data piece in the file.
+Lines 2-4: User inputs three names stored in variables.
+Writing Data (Lines 7-12):
+ Lines 2-4: Acquire input from the user, e.g.,
+ Alex
+ Alice
+ Alin
+
+ Line 7: Opens friends.txt for writing.
+ Lines 10-12: Writes usernames with \n, creating separate lines.
+ Result: File content with individual usernames on each line.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+1. Introduction to File Handling
+
+Appending Data to Existing Files in Python
+Appending vs. Overwriting:
+
+ 'w' mode overwrites existing file data with new content.
+
+Appending with 'a' Mode:
+
+Result:
+ friends.txt will contain
+
+ 'a' mode opens a file for append.
+
+ If file exists, won't be erased; if not, it's created
+ New data added to the end of existing content.
+
+Example – Preserving and Adding Data:
+
+ Code snippet to append new names to friends.txt:
+myfile = open('friends.txt', 'a')
+myfile.write('Matt\n')
+myfile.write('Chris\n')
+myfile.write('Suze\n')
+myfile.close()
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+1. Introduction to File Handling
+
+Reading Data From a File
+Using read Method:
+
+ For files opened in 'r' (read) mode.
+ read() method reads entire content into memory.
+ Returns content as a string.
+
+Example:
+
+ Line 2: Opens philosophers.txt in 'r' mode.
+ Line 5: infile.read() reads content into file_contents.
+ Line 11: Prints the content stored in file_contents.
+
+Note-1: read() returns file content as a string.
+Note-2: file_contents variable refers to the read string from the file.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+1. Introduction to File Handling
+
+Reading Data Line by Line
+Programs often handle file items (lines) one by one.
+Need for Line-by-Line Processing:
+
+ Many programs process file items one by one.
+ E.g., calculating total of sales amounts.
+
+Using readline Method:
+
+ readline() method reads a line from file.
+
+ Returns line as a string (with \n).
+
+Example:
+
+ Reading philosophers.txt line by line.
+ Utilizes readline() method for line-by-line processing.
+
+Note: readline() gets lines as strings for sequential handling.
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+1. Introduction to File Handling
+
+Reading Lines from a File
+
+ Line 1: Opens philosophers.txt in 'r' mode. Creates file object, assigns to infile.
+
+ When reading a file, an internal read position marks the location for the next item to be read, starting from the file's beginning.
+
+ Line 5: infile.readline() reads first line. Assigned to line1 as John
+ Line 6: Reads next line to line2, containing David
+ Line 7: Reads next line to line3, containing Edmund
+
+’.
+
+Locke\n
+
+.
+
+Hume\n
+
+.
+
+Burke\n
+
+ Then, the read position moves to end of file.
+
+ Line 10: Closes the file.
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+1. Introduction to File Handling
+
+Removing Newlines from Read Strings: Enhancing Output Clarity
+Challenge with Newlines:
+
+ Strings from readline method contain trailing \n.
+ This causes unintended issues like extra blank lines in output.
+
+Trimming \n from Strings:
+
+ Uses rstrip method to eliminate \n from file-read strings.
+name = 'Joanne Manchester\n'
+name = name.rstrip('\n')
+
+Example
+
+ Reads and displays philosophers.txt content.
+ Lines 10-12 use rstrip to remove \n from strings, result is A.
+ Note: Without lines 10-12, result is B.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+1. Introduction to File Handling
+
+Writing and Reading Numeric Data
+Writing Strings vs. Numbers:
+
+ Strings can be directly written using write method.
+ Numbers need conversion to strings using the str function.
+
+Converting Numbers to Strings:
+
+ Python's str function converts values to strings.
+ Example: str(num) converts value of num to string.
+
+Example: File Writing :
+
+ Line 2: Opens numbers.txt for writing (99, 45, 1384).
+ Lines 5-7: User input for three numbers.
+ Lines 10-12: Writes num1 – num3 as a string with newline.
+
+Value Conversion and Writing:
+
+ str(num1) + '\n' converts num1 to string and adds newline.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+1. Introduction to File Handling
+
+Converting Numeric Strings from Files
+
+When reading numbers from a file, they're read as strings.
+Example:
+infile = open('numbers.txt', 'r')
+value = infile.readline()
+# string
+infile.close()
+
+To perform calculations, strings must be converted to
+numeric types (int or float).
+Example:
+infile = open('numbers.txt', 'r')
+value = int(infile.readline()) # int
+infile.close()
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+1. Introduction to File Handling
+
+Using with Statement and Files in Python:
+
+The with statement simplifies resource management by automatically handling the acquisition and release
+of resources like files or connections.
+ Syntax: Utilize the with statement along with the open() function.
+ Acquisition: Obtain a resource (e.g., file) and assign it to a variable.
+ Usage: Access and manipulate the resource within the with block.
+ Automatic Release: Ensures automatic release of the resource when the block exits.
+ Exception Safety: Provides built-in exception handling and proper resource release.
+
+Comparison with Standard open() Function:
+
+ Standard: Open a file, perform operations, then manually close using file.close().
+ The with Statement: Enhances code clarity, guarantees proper closing, and handles exceptions implicitly.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+1. Introduction to File Handling
+
+Using with Statement and Files in Python:
+
+Comparison between standard open()/close() function and the with statement/open() function.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+1. Introduction to File Handling
+
+Using with Statement and Files in Python:
+
+Comparison between standard open()/close() function and the with statement/open() function.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+1. Introduction to File Handling
+
+Introduction to File Input and Output (I/O) – Summary
+
+File Operations: Learn how to read from and write to files.
+Write Data: Understand writing data using write() method.
+Read Data: Discover reading techniques like read() and readline().
+Efficient Code: Use with statement for safer and efficient file handling.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+2. Iterative File Processing
+
+Using Loops to Process Files
+Concept:
+
+ Files generally contain extensive data.
+ Loops are crucial for handling file data.
+
+Loop Usage with Files:
+
+ Files often store substantial data collections.
+ Loops process and analyze file data.
+
+Example
+
+ Collects sales data for multiple days from the user.
+ Writes data to sales.txt file.
+Input: num_days
+OpenFile: sales_file = CreateFile("sales.txt")
+For count in Range(1, num_days + 1):
+Input: sales
+WriteToFile: sales_file, ToString(sales)
+CloseFile: sales_file
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+2. Iterative File Processing
+
+Reading a File with a Loop and Detecting
+End of the File (EOF)
+Dynamic File Reading:
+
+ Programs often read files with unknown item count.
+
+Handling Unknown Items:
+
+ Need a way to detect end of file (EOF).
+
+Algorithm:
+
+ Open the file.
+ Use readline to read the first line.
+ While readline result isn't empty string:
+
+Python's EOF Detection:
+
+ readline returns empty string (`''`) beyond file end.
+
+Loop for Dynamic Reading:
+
+ while loop detects EOF using empty string.
+
+ Reads and processes all file items.
+
+Example:
+
+ Calculating total sales amount from sales.txt.
+
+ Process current item.
+ Read next line.
+
+ Close the file.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+2. Iterative File Processing
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+2. Iterative File Processing
+
+Using Python's for Loop to Read Lines
+Simplified Line Reading:
+
+ Python's for loop automates line reading from files.
+ No need for explicit EOF checks.
+
+For Loop Format:
+
+for variable in file_object:
+statement
+statement
+etc.
+
+How It Works:
+
+ Iterates for each line in the file.
+ Variable holds the line's content (as string).
+
+The for loop simplifies file reading, particularly for
+sequential line processing.
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+2. Iterative File Processing
+
+Processing Records in Files
+Concept: Records and Fields
+
+ File data often organized as records.
+ Record: Complete set of data for an item.
+ Field: Individual data piece within a record.
+
+File Data:
+
+ Records made of fields. Example: Employee data – each employee is a record.
+
+File Structure:
+
+ Each record is a set of fields. Fields contain specific data (e.g., name, ID).
+
+Sequential Record Writing:
+
+ Fields written one after another in a record. Example: Three employee records.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+2. Iterative File Processing
+
+Creating (Writing) Employee Records:
+User input: record count (line 2).
+Loop: employee details (lines 8-18).
+Gather: name, ID, department (lines 11-13).
+Write: data as records (lines 16-18).
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+33
+
+2. Iterative File Processing
+
+Reading Sequential Access File Records:
+Fields read sequentially to form complete records.
+Program Steps:
+ File opened (line 2).
+ First field of first record read (line 5) as employee name.
+ while loop (line 8) checks for non-empty value.
+ Inside loop: Reads second and third fields
+ (ID, department) and displays.
+
+ First field of next record read (line 27) for next employee's name.
+ Loop continues until no more records.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+34
+
+2. Iterative File Processing
+
+Using Loops to Process Files & Records – Summary
+
+Loop Utilization: Leverage loops such as while and for to methodically manage file data.
+Structured Processing: Apply loops to handle data records, fields, or lines within files.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+35
+
+3. Error Handling with try/except
+
+Exceptions:
+
+Concept: Exception & Handling
+
+ Exception: Error during runtime.
+ try/except: Manage errors smoothly.
+
+Error Impact: Sudden Halt
+
+ Errors halt program execution.
+
+Example: Division by 0
+
+ Define two numbers.
+ Dividing first by second.
+ Exception due to division by 0.
+
+Traceback: Error Details
+
+ Detailed error message (traceback).
+ Indicates problematic line(s).
+ Last line of traceback, ZeroDivisionError:
+
+8. Files, Exceptions, and Debugging
+
+division by zero
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+36
+
+3. Error Handling with try/except
+
+Exception Prevention and Handling
+Preventing Exceptions:
+
+ Careful program coding.
+ Use `if` statement to check conditions.
+
+8. Files, Exceptions, and Debugging
+
+Unavoidable Exceptions:
+
+ Some exceptions can't be prevented.
+ Exception might still occur despite careful coding.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+37
+
+3. Error Handling with try/except
+
+try/except Exception Handling
+
+Exception Handling: Respond to exceptions, avoid crashes.
+Components:
+ try keyword followed by a code block (try suite).
+
+ except keyword followed by exception name and handler code.
+
+Execution Flow:
+
+try/except Format:
+
+try:
+statement
+statement
+# ...
+except ExceptionName:
+statement
+statement
+# ...
+
+ Try suite statements execute.
+ If exception matches ExceptionName in except clause:
+ Handler runs. Program continues after try/except.
+
+ If exception doesn't match ExceptionName:
+ Program halts with traceback error.
+
+ If no exceptions occur (no errors) within try suite:
+
+ Skips except clauses/handlers. Program continues after try/except.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+38
+
+3. Error Handling with try/except
+
+try/except Exception Handling : Example – ZeroDivisionError
+try:
+user_input = 0 #int(input("Enter a number: "))
+result = 10 / user_input
+
+# ZeroDivisionError: division by zero
+
+print("Result:", result)
+except ZeroDivisionError: # ExceptionName is ZeroDivisionError
+print("Error: Cannot divide by zero.")
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+39
+
+3. Error Handling with try/except
+
+try/except Exception Handling : Example – ValueError
+try:
+user_input = 'ten' #int(input("Enter a number: "))
+result = user_input ** 2
+
+# except ValueError:
+
+print("Square:", result)
+except ValueError:
+
+# ExceptionName is ValueError:
+
+print("Error: Invalid input. Please enter a number.")
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+40
+
+3. Error Handling with try/except
+
+try/except Exception Handling : Example – FileNotFoundError
+try:
+file = open("there_is_no_file.txt", "r")
+
+# FileNotFoundError
+
+content = file.read()
+print("File Contents:", content)
+except FileNotFoundError:
+
+# ExceptionName is FileNotFoundError
+
+print("Error: File not found.")
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+41
+
+3. Error Handling with try/except
+
+Displaying an Exception’s Default Error Message
+
+Default Error Message: Exceptions create an object with a default error message.
+Exception Object: Contains info about the error, including the message.
+Assigning Exception: In except, use as variable to assign the exception object.
+Example:
+ The except Exception as e assigns the Exception object to e.
+ Displaying Message: Use print(e) to show the default error message.
+try:
+num = int(input("Enter a number: "))
+result = 10 / num
+except Exception as e:
+print(f"An error occurred: {e}")
+
+Result
+
+ The Exception
+8. Files, Exceptions, and Debugging
+
+as e captures and stores the error in e, then prints An error occurred: division by zero.
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+42
+
+3. Error Handling with try/except
+
+Handling Multiple Exceptions:
+
+ Multiple except Blocks: Use separate except blocks for different types of exceptions.
+ Matching Exception: The corresponding except block executes if the exception matches.
+ Distinct Handling: Handle each exception type uniquely.
+try:
+num = int(input("Enter a number: "))
+result = 10 / num
+print("Result:", result)
+except ZeroDivisionError:
+print("Error: Cannot divide by zero.")
+except ValueError:
+print("Error: Invalid input. Please enter a number.")
+
+ If you enter 0 as the value of num, you will receive the error message: Error: Cannot divide by zero.
+ If you enter 'zero' as the value of num, you will receive the error message: Error: Invalid input. Please
+8. Files, Exceptions, and Debugging
+
+enter a number.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+43
+
+3. Error Handling with try/except
+
+Handling All Exceptions with One except Clause:
+ Uniform Handling: A single except clause for any exception type.
+ General Approach: Catches all exceptions within the try block.
+ Consistency: Provides a uniform response to different exceptions.
+
+Cautions with One except Clause:
+
+Example
+try:
+num = int(input("Enter a number: "))
+result = 10 / num
+print("Result:", result)
+except:
+print("An error occurred")
+
+ Specific Handling: Named exceptions for different responses.
+ Clarity: Clear error identification with specific names.
+ Debugging: Named exceptions aid issue pinpointing.
+Whatever error occurs in the try block, the
+ Readability: Code is clearer with named exceptions.
+except clause will catch them all.
+ Control: Individual exception handling offers better control.
+ Maintainability: Named exceptions improve code organization.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+44
+
+3. Error Handling with try/except
+
+else Clause in try/except:
+
+Optional part after except.
+
+Format:
+try:
+
+# code
+except Exception:
+# code
+else:
+# code
+
+Runs when no exceptions occur in try.
+Skipped if there's an exception.
+
+8. Files, Exceptions, and Debugging
+
+Example
+try:
+num = int(input("Enter a number: "))
+result = 10 / num
+except ZeroDivisionError:
+print("Cannot divide by zero")
+else:
+print("Result:", result)
+
+ Input 0: ZeroDivisionError → Cannot divide by zero.
+ Non-zero: Successful division → else → result shown.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+45
+
+3. Error Handling with try/except
+
+The finally Clause:
+
+ The finally suite runs regardless of exceptions.
+ Used for cleanup (e.g., closing files).
+ Always executes after try and related exception handlers.
+ Syntax
+try:
+# statements
+except ExceptionName:
+# exception handling
+finally:
+# cleanup statements
+
+8. Files, Exceptions, and Debugging
+
+ Example
+try:
+num = int(input("Enter a number: "))
+result = 10 / num
+except ZeroDivisionError:
+print("Cannot divide by zero")
+finally:
+print("Cleanup: This will always execute")
+print("Program continues...")
+
+ Entering 0 catches ZeroDivisionError, prints Cannot
+divide by zero executes finally.
+ Non-zero input results in successful division and execution of
+finally block.
+ The Program continues... always printed after finally.
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+46
+
+3. Error Handling with try/except
+
+try/except Summary
+
+Handling Exceptions: try/except statements manage errors in programs.
+Exception Types : Specific exceptions (ExceptionName) caught using try/except blocks.
+General Exception Handling: Single except clause (except:) catches all exceptions.
+The else Clause: Runs if no exceptions occur in the try block.
+The finally Clause: Code in the finally block always executes, for cleanup or final actions.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+47
+
+4. CSV Data Manipulation
+
+CSV File Processing
+
+A CSV (Comma-Separated Values) file stores tabular data in plain text, with each line representing a row and
+values separated by commas.
+Data format
+
+8. Files, Exceptions, and Debugging
+
+Data Displayed in Spreadsheet
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+48
+
+4. CSV Data Manipulation
+
+CSV File Processing – Writing Data to a CSV file
+
+When working with CSV files, you need to import the csv module.
+Utilize the with statement for streamlined file handling.
+
+import csv
+with open('wk8.csv', mode='w', newline='') as mycsv:
+writer = csv.writer(mycsv)
+writer.writerow(['Name', 'Job', 'Experience']) # Header
+writer.writerow(['Alice', 'Intern', '0'])
+# Data
+writer.writerow(['Alan', 'Manager', '5'])
+# Data
+writer.writerow(['Alin', 'Director', '10']) # Data
+
+8. Files, Exceptions, and Debugging
+
+To prevent Python from adding
+a new line after each write
+statement in Windows, include
+the argument newline=''.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+49
+
+4. CSV Data Manipulation
+
+CSV File Processing – Reading Data from a CSV File
+In some CSV files, you have to choose the right encoding.
+
+for all languages
+ encoding='cp1252' for Western Europe (Works on Windows)
+ See for more detail, https://docs.python.org/3.8/library/codecs.html#standard-encodings
+ encoding='utf-8'
+
+import csv
+with open('wk8.csv', mode='r', newline='', encoding='cp1252') as mycsv:
+reader = csv.reader(mycsv)
+record = next(reader) # first line
+print(record)
+record = next(reader) # second line
+print(record)
+record = next(reader) # third line
+print(record)
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+50
+
+4. CSV Data Manipulation
+
+CSV File Processing – Reading Data from a CSV File
+
+Utilize the with statement for streamlined file handling and iteration processes.
+import csv
+with open('wk8.csv', mode='r', newline='') as mycsv:
+reader = csv.reader(mycsv)
+record = next(reader) # read header
+for record in reader:
+print(record)
+# read contents
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+51
+
+4. CSV Data Manipulation
+
+CSV File Processing – Reading Data from a CSV File with DictReader
+ DictReader reads CSVs, treating
+
+rows as dictionaries with column names as keys. This simplifies columnbased access compared to numerical indices.
+import csv
+with open('wk8.csv', mode='r') as mycsv:
+reader = csv.DictReader(mycsv) # skip header automatically
+for record in reader:
+# access field of data in a record based on its header’s name
+print(record['Name'], record['Job'], record['Experience'])
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+52
+
+4. CSV Data Manipulation
+
+CSV File Processing – Summary
+
+Import csv Module: Familiarize with the need to import the csv module for CSV file operations.
+Write Data: Understand how to create and write data to a CSV file.
+Read Data: Learn to read and retrieve data from a CSV file.
+Use of with Statement: Learn the efficient handling of file operations using the with statement.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+53
+
+5. Debugging
+
+Debugging
+Debugging is the process of finding and fixing errors in software. It's vital for software development, helping
+programmers correct mistakes that lead to unexpected program behavior.
+Spot the Problem: Identify the issue in the program.
+Find the Bad Part: Locate the part of the code causing the problem.
+Use Tools: Employ tools to investigate and understand the issue.
+Test Ideas: Try out solutions by changing the code.
+Make the Fix: Correct the problem in the code.
+Check if it Works: Test to ensure the fix resolved the issue.
+Learn for Next Time: Remember the process to avoid similar problems in the future.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+54
+
+5. Debugging
+
+Debugging Process
+
+Create a breakpoint (red dot) by clicking the mouse on the interesting statement.
+Start running and debugging by clicking the drop-down symbol and selecting 'Debug Cell.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+55
+
+5. Debugging
+
+Debugging Process
+
+Running step-by-step
+ F5  Continue
+ F10  Step Over
+ F11  Step Into
+
+8. Files, Exceptions, and Debugging
+
+ Shift + F11  Step Out
+ CTRL + Shift + F5  Restart
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+56
+
+Summary
+
+Understand and able to work with Files and Exceptions
+
+Introduction to File Handling: Understand the fundamentals of working with files in Python.
+Iterative File Processing: Learn to use loops to navigate through files, including reading records and lines.
+Error Handling with Try/Except: Discover how to gracefully manage errors using try/except statements.
+CSV File Processing: Explore the basics of reading and writing CSV files for efficient data manipulation.
+Using the debugging process to effectively identify and resolve software errors.
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+57
+
+Assignment
+
+Do the 8th Assignment
+
+Detail is given in the Classroom
+
+8. Files, Exceptions, and Debugging
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+58
+
+

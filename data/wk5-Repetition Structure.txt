@@ -1,0 +1,925 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 05
+Repetition Structure
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1.
+2.
+3.
+4.
+
+Overview
+While-Loop: Concept, Syntax, and Examples
+For-Loop : Concept, Syntax, and Examples
+Nested Loops
+
+5. Repetition Structure
+
+1. Understanding to loops in programming
+2. Understanding and using while-loops, including
+their syntax and examples
+3. Understanding and using for-loops, including
+their syntax and examples
+4. Exploring nested loops for creating more complex
+solutions
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Overview
+
+Introduction to Repetition Structures
+
+Repetition structures (loops) are fundamental for automating tasks and processing data iteratively.
+There are two main types of loops:
+ while loop
+ for loop
+
+Loops offer precise control over execution flow, leading to concise and modular code.
+Improved code readability and maintainability are achieved by using repetition structures.
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+2. while Loop
+
+The while Loop: A Condition-Controlled Loop
+
+ The while loop is a condition-controlled repetition structure
+in Python.
+ It allows repeated execution of a block of code as long as a
+specified condition remains true.
+ The loop continues until the condition evaluates to false, at
+which point it terminates, allowing the program to continue
+with the subsequent code.
+ It is suitable for situations with uncertain iterations or when
+continuous execution is required until a specific condition is
+met.
+ Ensuring the loop condition will eventually become false is
+crucial to avoid infinite loops.
+ The while loop enables efficient automation of tasks, data
+processing, and dynamic program behavior.
+
+5. Repetition Structure
+
+condition
+
+True
+
+statement(s)
+
+False
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+2. while Loop
+
+while Loop: Syntax
+while condition:
+statement
+statement
+etc.
+
+Comparing assignment vs. shorthand assignment
+
+count = 1
+
+while Loop: Example
+count = 1
+while count <= 5:
+print(count)
+count += 1
+
+count <= 5
+
+True
+
+Operation
+Addition
+
+Assignment
+
+Shorthand Assignment
+
+Example
+
+x = x + value
+
+x += value
+
+x += 3 -> x = 8
+
+Subtraction
+
+y = y - value
+
+y -= value
+
+y -= 4 -> y = 6
+
+Multiplication
+
+a = a * value
+
+a *= value
+
+a *= 5 -> a = 15
+
+Division
+
+b = b / value
+
+b /= value
+
+b /= 4 -> b = 3
+
+print(count)
+
+count += 1
+
+False
+
+The while loop will count from 1 to 5, printing each number in the process.
+The loop continues if the value of count is less than or equal to 5, incrementing count by 1 in each iteration
+until it reaches 5.
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+2. while Loop
+
+The while loop is a pretest loop
+
+The while loop is known as a pretest loop, which means it tests its condition before performing an iteration.
+Because the test is done at the beginning of the loop, you usually have to perform some steps prior to the
+loop to make sure that the loop executes at least once.
+See this example again:
+count = 1
+while count <= 5:
+print(count)
+count += 1
+# Output
+1 2 3 4 5
+
+The count variable must exist and reference a value less than or equal to 5.
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+2. while Loop
+
+Infinite Loops
+
+An infinite loop has no stopping condition, causing it to repeat endlessly until the program is interrupted.
+count = 1
+while count <= 5:
+print(count)
+# count += 1
+
+: What happens if we forget this line?
+
+Infinite loops happen when the programmer forgets to include code inside the loop that can make the test
+condition false.
+To prevent unintended program behavior, it's crucial to avoid writing infinite loops in most cases.
+In this example, the line count += 1 ensures that the loop will eventually stop after a certain number of
+iterations.
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. while Loop
+
+The while loop: More Examples
+
+// is an integer
+
+division or floor
+division. It performs division
+Sum of Digits
+between two numbers and
+ The program takes an integer input from the user and calculates the sum of its digits.
+returns the integer result,
+ It uses a while loop to extract each digit from the number and adds it to the variable sum_digits. discarding any decimal part.
+For example, 7 // 3 is 2.
+
+ The loop continues until the number becomes zero, and the final sum of digits is displayed.
+# Pseudo Code
+Input number from user
+Set sum_digits = 0
+while number > 0:
+Extract last digit from number
+Add digit to sum_digits
+Remove the last digit from number
+Print "Sum of digits:" + sum_digits
+
+# Python Code
+number = int(input("Enter
+sum_digits = 0
+while number > 0:
+digit = number % 10 #
+sum_digits += digit #
+number //= 10
+#
+#
+
+a number: "))
+get the last digit
+add the last digit to the sum_digits
+Divide the number by 10 and
+get only the integer results(floor devision)
+iteration 0: digit = 5, number = 1234
+
+print("Sum of digits:", sum_digits) iteration 1: digit = 4, number = 123
+# Output of 12345
+Sum of digits: 15
+
+5. Repetition Structure
+
+iteration 2: digit = 3, number = 12
+iteration 3: digit = 2, number = 1
+iteration 4: digit = 1, number = 0
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. while Loop
+
+The while loop: More Examples
+Password Verification
+
+ The program simulates a basic password verification process.
+ The user is prompted to enter a password, and the while loop keeps iterating until the correct password is entered.
+ If the entered password is incorrect, the user is asked to try again until they get it right.
+ Once the correct password is provided, the loop terminates, and "Access granted!" is displayed.
+# Pseudo Code
+Set password = "secret"
+Input user_input from user
+while user_input is not equal to password:
+Print "Incorrect password. Try again."
+Input user_input from user
+Print "Access granted!"
+
+5. Repetition Structure
+
+# Python Code
+password = "secret"
+user_input = input("Enter the password: ")
+while user_input != password:
+print("Incorrect password. Try again.")
+user_input = input("Enter the password: ")
+print("Access granted!")
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+3. for Loop
+
+The for Loop: A Count-Controlled Loop
+
+The for loop in Python repeats a block of code for each element in a sequence.
+It works best with fixed collections like lists, strings, tuples, or ranges of numbers.
+The loop uses a variable to represent each element in the sequence, making the syntax straightforward.
+For example, if a cafe is open five days per week, we can use a for loop to calculate the total sales for the
+week. The loop will run exactly five times, once for each day.
+With a for loop, we prompt the user to enter the sales for one day during each iteration.
+
+condition
+
+True
+
+statement(s)
+
+False
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+3. for Loop
+
+for Loop: Syntax
+
+In Python, iterable data is any data that can be iterated over using loops. For example, lists,
+are iterable data types. We can use a for loop to go through each element in an iterable:
+
+strings, and tuples
+
+for variable in sequence:
+numbers = [1, 2, 3, 4, 5]
+for num in numbers:
+statement
+print(num)
+statement
+In this example, the numbers list is iterable, and the for loop prints each element one by one.
+etc.
+
+ variable:
+
+A variable that represents each element in the sequence during each iteration of the loop.
+ sequence: The collection of data through which the for loop iterates. It can be a list, string, tuple,
+range, or any other iterable object.
+During each iteration, the for loop takes the value of each element in the sequence.
+It then executes the specified code block for each element, one by one.
+The for loop provides a convenient and efficient way to work with collections and perform repetitive tasks.
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+3. for Loop
+
+for Loop: Example
+
+Display a number from 1 to 5 using a for loop
+for num in [1,2,3,4,5]:
+print(f"The number is {num}.")
+
+Result
+The
+The
+The
+The
+The
+
+number
+number
+number
+number
+number
+
+5. Repetition Structure
+
+is
+is
+is
+is
+is
+
+1.
+2.
+3.
+4.
+5.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+3. for Loop
+
+for Loop: Example
+
+Display a name from an iterable data using for loop
+for name in ['Alex', 'Alan', 'Alin']:
+print(name)
+
+Result
+Alex
+Alan
+Alin
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+3. for Loop
+
+Using the range Function with the for Loop
+
+The range function in Python simplifies count-controlled for loops.
+It generates an iterable object, similar to a list, containing a sequence of values that can be looped over.
+The syntax for the range function is as follows:
+For example:
+range(start, stop, step)
+
+for i in range(1, 6):
+print(i)
+
+•
+•
+•
+
+start: The first number in the sequence.
+
+stop: The sequence will go up to, but not include, this number.
+step: The difference between each number in the sequence.
+
+In this code, the range function generates values from 1 to 5, and the for loop prints them one by one.
+Range makes working with sequences of numbers in Python much simpler.
+The code above give the same result as:
+for i in [1,2,3,4,5]:
+print(i)
+5. Repetition Structure
+
+The result of both programs are:
+1 2 3 4 5
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+3. for Loop
+
+The for Loop: More Examples
+for i in range(5):
+print(f"Current index is {i}")
+
+for i in range(0,5,1):
+print(f"Current index is {i}")
+
+for i in range(0,5,2):
+print(f"Current index is {i}")
+
+# Output
+Current index
+Current index
+Current index
+Current index
+Current index
+
+# Output
+Current index
+Current index
+Current index
+Current index
+Current index
+
+# Output
+Current index is 0
+Current index is 2
+Current index is 4
+
+is
+is
+is
+is
+is
+
+0
+1
+2
+3
+4
+
+is
+is
+is
+is
+is
+
+0
+1
+2
+3
+4
+
+for i in range(5,0,-1):
+print(f"Current index is {i}")
+
+for i in range(4,-1,-1):
+print(f"Current index is {i}")
+
+# Output
+Current index
+Current index
+Current index
+Current index
+Current index
+
+# Output
+Current index
+Current index
+Current index
+Current index
+Current index
+
+5. Repetition Structure
+
+is
+is
+is
+is
+is
+
+5
+4
+3
+2
+1
+
+is
+is
+is
+is
+is
+
+4
+3
+2
+1
+0
+
+The syntax for the range function is as follows:
+range(start, stop, step)
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+3. for Loop
+
+The for Loop: More Examples
+
+Looped Squares Table: 1 to 10 and Their Squares
+print('Number\tSquare')
+print('--------------')
+for number in range(11):
+square = number**2
+print(f'{number}\t{square}’)
+# Output
+Number Square
+-------------1
+1
+2
+4
+3
+9
+4
+16
+5
+25
+6
+36
+7
+49
+8
+64
+9
+81
+10 100
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+3. for Loop
+
+The for Loop: More Examples
+
+Calculate the total cost of fruits in a shopping cart
+fruit_prices = [10, 25, 15, 8, 30]
+total_cost = 0
+for price in fruit_prices:
+total_cost += price
+print("Total cost of fruits in the cart:", total_cost)
+# Output
+Total cost of fruits in the cart: 88
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+3. for Loop
+
+The for Loop: More Examples
+
+ Customizable Summation: User-Controlled Loop with Input Function:
+ Summation of 1 to N, where the user can control the number of loops with the input function
+print("This program sums numbers from 1 to N.")
+end = int(input('Input the N number: '))
+sum = 0
+for num in range(1, end + 1):
+sum += num
+print(f'Sum of 1:{end} = {sum}.')
+# Output
+Program sum a number from 1 to N. (Suppose the user give an input of 10)
+Sum of 1:10 = 55.
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+4. Nested Loop
+
+Nested Loops
+
+A loop that is inside another loop is called a nested loop.
+The inner loop executes fully for each iteration of the outer loop.
+Nested Loops Syntax:
+# For-Loop
+for outer_variable in outer_sequence:
+for inner_variable in inner_sequence:
+# Code block for inner loop
+# Code block for outer loop
+
+5. Repetition Structure
+
+# While-Loop
+o_var = initial_value
+while o_var_condition:
+i_var = initial_value
+while i_var_condition:
+# Code block for inner loop
+# Update i_var to continue the inner loop
+# Code block for outer loop
+# Update o_var to continue the outer loop
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+4. Nested Loop
+
+Nested Loops Example: A nested loop to print a multiplication table
+# Multiplication table from 1 to 3
+for i in range(1, 4):
+for j in range(1, 4):
+result = i * j
+print(f"{i} x {j} = {result}")
+print() # A blank line to separate each row
+#
+1
+1
+1
+
+Output
+x 1 = 1
+x 2 = 2
+x 3 = 3
+
+# Multiplication table from 1 to 3
+i = 1
+while i <= 3:
+j = 1
+while j <= 3:
+result = i * j
+print(f"{i} x {j} = {result}")
+j += 1
+print() # A blank line to separate each row
+i += 1
+
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+
+#
+1
+1
+1
+
+Output
+x 1 = 1
+x 2 = 2
+x 3 = 3
+
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+4. Nested Loop
+
+Nested Loops Example: A nested loop to print pattern – Half Pyramid
+# For-loop solution - Half Pyramid
+for i in range(1, 6):
+for j in range(i):
+print("*", end=" ")
+print()
+# While-loop solution - Half Pyramid
+i = 1
+while i <= 5:
+j = 1
+while j <= i:
+print("*", end=" ")
+j += 1
+print()
+i += 1
+
+5. Repetition Structure
+
+*
+*
+*
+*
+*
+
+*
+* *
+* * *
+* * * *
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+4. Nested Loop
+
+Nested Loops Example: A nested loop to print pattern – Inverted Half Pyramid
+# For-loop solution – Inverted Half Pyramid
+for i in range(5, 0, -1):
+for j in range(1, i + 1):
+print(j, end=" ")
+print()
+# While-loop solution – Inverted Half Pyramid
+i = 5
+while i >= 1:
+j = 1
+while j <= i:
+print(j, end=" ")
+j += 1
+print()
+i -= 1
+
+Can you do it with While-Loop?
+
+5. Repetition Structure
+
+1
+1
+1
+1
+1
+
+2 3 4 5
+2 3 4
+2 3
+2
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+4. Nested Loop
+
+Nested Loops Example: A nested loop to print pattern – Hollow Triangle Pattern
+# For-loop solution - Hollow Triangle Pattern
+size = 5
+for i in range(size):
+for j in range(i + 1):
+if i == size - 1 or j == 0 or j == i:
+print("*", end=" ")
+else:
+print(" ", end=" ")
+print()
+
+Can you do it with For-Loop?
+
+# While-loop solution - Hollow Triangle Pattern
+size = 5
+i = 0
+while i < size:
+j = 0
+while j <= i:
+if i == size - 1 or j == 0 or j == i:
+print("*", end=" ")
+else:
+print(" ", end=" ")
+j += 1
+print()
+i += 1
+5. Repetition Structure
+
+*
+* *
+*
+*
+*
+*
+* * * * *
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+4. Nested Loop
+
+Nested Loops Example: A nested loop to print pattern – Hollow Square Pattern
+# For-loop solution - Hollow Square Pattern
+size = 5
+for i in range(size):
+for j in range(size):
+if i == 0 or i == size - 1 or j == 0 or j == size - 1:
+print("#", end=" ")
+else:
+print(" ", end=" ")
+print()
+
+Can you do it with For-Loop?
+
+# While-loop solution - Hollow Square Pattern
+size = 5
+i = 0
+while i < size:
+j = 0
+while j < size:
+if i == 0 or i == size - 1 or j == 0 or j == size - 1:
+print("#", end=" ")
+else:
+print(" ", end=" ")
+j += 1
+print()
+i += 1
+
+Can you do it with While-Loop?
+
+5. Repetition Structure
+
+# # # # #
+#
+#
+#
+#
+#
+#
+# # # # #
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+Summary
+
+Understand the Repetition Structure
+
+Overview of loops in programming
+While-loops, including their syntax and examples
+For-loops, including their syntax and examples
+Nested loops for creating complex solutions
+Comprehensive knowledge of loops to efficiently solve programming problems
+involving repetition and iteration
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+Assignment
+
+Do the 5th Assignment
+
+Detail is given in the Classroom
+
+5. Repetition Structure
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+

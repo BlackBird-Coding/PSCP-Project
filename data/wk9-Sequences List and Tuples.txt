@@ -1,0 +1,1005 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 09
+Sequences: List and Tuples
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1.
+
+Sequences Concept
+
+1.
+
+Understand the concept of sequences in Python
+
+2.
+
+Lists
+
+2.
+
+Be able to work with Lists and Tuples
+
+•
+•
+•
+•
+•
+
+Define and Access List Elements
+Utilize Slicing
+Find items with the in Operator
+Use Methods and Built-in Functions
+Learn about Copying Lists and List
+Comprehensions
+• Explore Two-Dimensional Lists
+
+3.
+
+Tuples
+
+4.
+
+Conversion: Lists <-> Tuples
+
+9. Lists and Tuples
+
+• Define, access, and manipulate both one- and
+two-dimensional Lists and Tuples.
+• Understand the conversion between Lists and
+Tuples.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Sequence Concept
+
+Sequences Concept:
+• A sequence is a data structure that holds multiple items stored one after
+the other.
+• Operations can be performed on sequences to examine and manipulate
+their items.
+• Two Fundamental Sequence Types:
+
+• List – Mutable (can be changed after creation)List – mutable (program can change
+its contents)
+• Example: list_example = [1, 2, 3, 4]
+
+• Tuple – Immutable (cannot be changed after creation)
+• Example: tuple_example = (1, 2, 3, 4)
+
+• Lists and Tuples provide different ways to store and work with data.
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+2. List – Overview
+
+Lists:
+• A list is an object that stores multiple data items.
+
+•List elements are enclosed in brackets and separated by commas.
+•Example: list_example = [1, 2, 3, 4]
+
+• Lists are mutable, allowing their contents to change during a program's
+execution.
+• They are dynamic data structures that can have items added or removed from
+them.
+• Lists can be manipulated using indexing, slicing, and various methods.
+
+• Lists provide flexibility and a wide range of operations for handling
+elements efficiently during program execution.
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+2. List – Defining and Accessing List Elements
+
+Lists – Defining and Accessing Elements
+• Defining Lists
+
+• Lists can hold various types of elements.
+• A list of numbers
+prime_numbers = [1, 3, 5, 7, 13, 17, 23, 37]
+• Once executed, prime_numbers references the list below
+prime_numbers ---->
+
+1
+
+3
+
+5
+
+7
+
+13
+
+17
+
+23
+
+37
+
+• A list of strings
+pet_animals= ['cat', 'dog', 'bird', 'rabbit']
+• Once executed, the variable pet_animals reference the list as shown below
+pet_animals ---->
+
+cat
+
+dog
+
+bird
+
+rabbit
+
+• A list of mixed types
+employee_info= ['Messi’, 36, 1.70, ‘Inter Miami']
+• Once executed, the variable employee_info reference the list as shown below
+employee_info ---->
+9. Lists and Tuples
+
+Messi
+
+36
+
+1.70
+
+Inter Miami
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+2. List – Defining and Accessing List Elements
+
+Lists – Defining and Accessing Elements (Cont)
+• Define lists from list() function
+list_from_func1 = list(range(3))
+print(list_from_func1)
+# [0, 1, 2]
+list_from_func2 = list(range(1,10,3))
+# [1, 4, 7]
+print(list_from_func2)
+
+• Define lists from repetition operator
+list_from_rep_opr1 = [1] * 5
+print(list_from_rep_opr1)
+
+# [1, 1, 1, 1, 1]
+
+list_from_rep_opr2 = list_from_func1 * 5
+print(list_from_rep_opr2)
+# [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+2. List – Defining and Accessing List Elements
+
+Lists – Defining and Accessing Elements (Cont)
+• Access list elements using indexes:
+
+• Index start at 0 (0 for the first element, 1 for the second, and so on).
+• The last element's index is one less than the list's length.
+
+• Example: my_list
+
+= [10, 20, 30]
+
+• Indexes: 0, 1, 2
+• Printing elements: print(my_list[0], my_list[1], my_list[2]) gives 10 20 30
+
+• Negative Indexes: Negative indexes count from the end of the list:
+• -1 refers to the last element, -2 to the second-to-last, and so on.
+
+• Example: print(my_list[-1],
+
+9. Lists and Tuples
+
+my_list[-2], my_list[-3]) gives 30 20 10
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. List – Defining and Accessing List Elements
+
+Lists – Defining and Accessing Elements (Cont)
+• Accessing list element – iterating with for or while loop
+• Commonly used format
+for variable in list:
+statement
+statement
+...
+
+• Example
+
+prime_numbers = [1, 3, 5, 7]
+for number in prime_numbers:
+print(number)
+======= output result =======
+1
+3
+5
+7
+
+9. Lists and Tuples
+
+index = 0
+while index < len(list): # length of a sequence
+statement
+...
+index += 1
+index = 0
+while index < len(prime_numbers):
+print(prime_numbers[index]) # indexing
+index += 1
+======== output result ========
+1
+3
+5
+7
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. List – Defining and Accessing List Elements
+
+Lists – Defining and Accessing Elements (Cont)
+• Indexing in Lists: Index Errors
+
+• Index Errors occur when trying to access elements with invalid indexes.
+• Example:
+my_list = [10, 20, 30, 40]
+index = 0
+while index < 5:
+print(my_list[index])
+index += 1
+
+• The last valid index is 3 for this list.
+• Using an invalid index will raise an IndexError exception.
+• On the last iteration, index becomes 4 (invalid for this list), leading to an IndexError
+exception.
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+2. List – Defining and Accessing List Elements
+
+Lists – Mutable
+• Lists in Python are mutable, can be modified after creation.
+• Example:
+even_numbers = [2, 4, 6, 8]
+print(event_numbers)
+
+even_numbers[3] = 10
+print(event_numbers)
+
+========== output =========
+2
+4
+6
+8
+
+========== output =========
+2
+4
+6
+10
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+2. List – Defining and Accessing List Elements
+
+List – Concatenating Lists (joining)
+• Combining multiple lists can be done using the + operator to
+• Example:
+
+list_a = [1, 2, 3]
+list_b = ['a', 'b', 'c']
+list_c = ['ok']
+Not_a_list = 'no list'
+
+# this is not a list
+
+list_all_1 = list_a + list_b + list_c
+print(list_all_1)
+============ output ==============
+[1, 2, 3, 'a', 'b', 'c', 'ok']
+list_all_2 = list_a + list_b + not_a_list
+print(list_all_2)
+============ output ==============
+TypeError: can only concatenate list (not "str") to list
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+2. List – Slicing
+
+A slicing expression is used to select a range of elements from a sequence.
+• The general format of a slice is:
+my_list[start:end:step]
+
+start – is the index of the first element in the slice (default is 0).
+end – marks the end of the slice (default is the length of the slice).
+step – is the incrementing step (default is 1).
+
+• The result is a new list containing elements from start to end-1 with an
+increment of step.
+• Examples
+
+• Given list: days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
+'Saturday']
+
+• Slicing: mid_days = days[2:5]
+• Result: mid_days is ['Tuesday', 'Wednesday', 'Thursday']
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+2. List – Slicing
+
+• NOTE: Invalid indexes do not cause slicing expressions to raise an
+exception.
+• end index beyond list length? Python uses list length.
+
+• start index before the list? Python starts from the beginning.
+• start index > end index? You get an empty list.
+
+• Examples:
+
+my_list = [1, 2, 3, 4, 5]
+print(my_list[3:8])
+# [4, 5]
+: end index > length of list
+print(my_list[-6:3])
+# [1, 2, 3] : start index before the list
+print(my_list[4:3])
+# []
+: start index > end index
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+2. List – Slicing
+
+• More Examples
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec’]
+print(months[0:2])
+
+# ['Jan', 'Feb']
+
+print(months[0:12])
+
+# ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+print(months[0:])
+
+# ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+print(months[:])
+
+# ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+print(months[:0])
+
+# [] No Error, but returning empty list
+
+print(months[::2])
+
+# ['Jan', 'Mar', 'May', 'Jul', 'Sep', 'Nov']
+
+print(months[-1])
+
+# Dec
+
+print(months[-1:-3])
+
+# [] No Error, but returning empty list
+
+print(months[-1::-1])
+
+# ['Dec', 'Nov', 'Oct', 'Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar', 'Feb', 'Jan']
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+2. List – Finding Item with in Operator
+
+Using the in Operator to Check Membership in Lists
+• The in operator is used to check if an element is a member of a list.
+• The common format is:
+item in list # the result will be True or False)
+
+• Examples:
+
+names = ['alex', 'alice', 'alan']
+print('alan'
+print('ally'
+print('alan'
+print('ally'
+
+9. Lists and Tuples
+
+in names)
+in names)
+not in names)
+not in names)
+
+#
+#
+#
+#
+
+True
+False
+False
+True
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+2. List
+
+Sorting a List in Python
+• Sort Algorithm
+
+• To sort a list in descending order (high to low), you can use a sorting algorithm like
+the following two for-loops:
+my_list = [1, 3, -2, 9]
+1
+
+3
+
+-2
+
+9
+
+3
+
+1
+
+9
+
+-2
+
+3
+
+9
+
+1
+
+-2
+
+3
+
+1
+
+-2
+
+9
+
+3
+
+1
+
+9
+
+-2
+
+9
+
+3
+
+1
+
+-2
+
+3
+
+1
+
+-2
+
+9
+
+3
+
+9
+
+1
+
+-2
+
+9
+
+3
+
+1
+
+-2
+
+3
+
+1
+
+9
+
+-2
+
+3
+
+9
+
+1
+
+-2
+
+9
+
+3
+
+1
+
+-2
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+2. List
+
+Sort Algorithm – sorting list implementation
+my_list = [1, 3, -2, 9]
+To sort a list in descending order (high to low) : two for-loops
+def simple_sort(items):
+sorted = [] + items
+for i in range(len(sorted)-1):
+for j in range(len(sorted)-1):
+if sorted[j] < sorted[j+1]:
+tmp = sorted[j]
+sorted[j] = sorted[j+1]
+sorted[j+1] = tmp
+return sorted
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+2. List
+
+Sort Algorithm – sorting list implementation
+my_list = [1, 3, -2, 9]
+
+To sort a list: two for-loops
+
+def simple_sort(items, method = 0):
+sorted = [] + items
+for i in range(len(sorted)-1):
+for j in range(len(sorted)-1):
+if method == 0: # descending order (high to low)
+if sorted[j] < sorted[j+1]:
+tmp = sorted[j]
+sorted[j] = sorted[j+1]
+sorted[j+1] = tmp
+else:
+# ascending order (low to high)
+if sorted[j] > sorted[j+1]:
+tmp = sorted[j]
+sorted[j] = sorted[j+1]
+sorted[j+1] = tmp
+return sorted
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+2. List – Methods and Built-in Functions
+
+• Methods for working with list elements:
+• append(item) – adds an item to the end of the list.
+
+• index(item) – returns the index of the first element
+•
+•
+•
+•
+
+in the list that has the same value as the item.
+insert(index, item) – inserts an item into the list at a specific index.
+sort() – sorts items in the list in either ascending (default) or descending order.
+remove(item) – removes the first occurrence of the item from the list; raises an error if not found.
+reverse() – reverses the order of items in the list.
+
+• Built-in functions for working with lists:
+
+– returns the item with the lowest value in the sequence.
+max() – returns the item with the highest value in the sequence.
+len() – returns the length of the sequence.
+
+• min()
+•
+•
+
+• Statement
+
+• del list[index] – Use del statement
+
+9. Lists and Tuples
+
+to remove an item from the list at a specific index.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+2. List – Methods and Built-in Functions
+
+• Examples:
+my_list = [1, 4, 1, 3, 5, 2]
+
+# [1, 4, 1, 3, 5, 2]
+
+my_list.reverse()
+
+# [2, 5, 3, 1, 4, 1] (Reverse the list)
+
+my_list.append(99)
+
+# [2, 5, 3, 1, 4, 1, 99] (Append 99 to the end of the list)
+
+my_list.index(5)
+
+# 1 (Find the index of the first occurrence of 5)
+
+my_list.insert(4, 77)
+
+# [2, 5, 3, 1, 77, 4, 1, 99] (Insert 77 at index 4)
+
+my_list.remove(1)
+
+# [2, 5, 3, 77, 4, 1, 99] (Remove the first occurrence of 1)
+
+my_list.sort()
+
+# [1, 2, 3, 4, 5, 77, 99] (Sort the list in ascending order)
+
+my_list.sort(reverse=True)
+
+# [99, 77, 5, 4, 3, 2, 1] (Sort the list in descending order)
+
+del my_list[4]
+
+# [99, 77, 5, 4, 2, 1] (Delete the element at index 4)
+
+min(my_list)
+
+# 1 (Find the minimum value in the list)
+
+max(my_list)
+
+# 99 (Find the maximum value in the list)
+
+len(my_list)
+
+# 6 (Get the length of the list)
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+2. List – Copying Lists and List Comprehensions
+
+Copying lists: Two basic ways
+• Makes two variables (list names) point to the same object in memory.
+list_a = [1, 2, 3]
+list_b = list_a
+list_a[1] = 99
+
+# list_a = [1, 2, 3]
+# list_b = [1, 2 ,3] <- Refers to the same memory as list_a
+# A change occurs in both list_a and list_b.
+
+===================== results ========================
+The elements of both list_a and list_b is [1, 99, 3]
+
+• Makes two variables (list names) point to different objects in memory.
+list_c = [1, 2, 3]
+list_d = [] + list_c
+list_c[1] = 99
+
+# list_c = [1, 2, 3]
+# list_d reserves its own memory address and contains copied elements
+from list_c.
+# Changes occur only in list_c
+
+===================== results ========================
+list_c is [1, 99, 3] but list_d is [1, 2, 3]
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+2. List – Copying Lists and List Comprehensions
+
+List Comprehensions
+• List comprehensions allow you to create a new list by iterating over the
+elements of an existing list.
+• The standard format is:
+New_list = [item for item in old_list]
+item represents the result expression
+item in old_list
+
+• Examples
+
+is the iteration expression
+
+old_list = [1, 2, 3, 4, 5, 6]
+new_list = [x for x in old_list]
+
+# Create a new list with elements from the existing list
+
+new_list is [1, 2, 3, 4, 5, 6], Ensure it's a different memory object.
+new_list_square = [x**2 for x in old_list]
+new_list_square is [1, 4, 9, 16, 25, 36]
+
+9. Lists and Tuples
+
+# raise each element to the power of 2.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+2. List – Copying Lists and List Comprehensions
+
+List Comprehensions with if Clauses
+•
+•
+
+Create a new list by iterating over elements of an existing list if they satisfy a
+requirement.
+Standard format
+new_list = [item for item in old_list if_clause]
+
+•
+
+where if_clause is a condition.
+
+Examples
+old_list = [1, 2, 3, 4, 5, 6]
+new_list1 = [x for x in old_list if x % 2 == 0] # create a new list from even number
+new_list1 is [2, 4, 6]
+new_list2 = [x for x in old_list if x % 2 == 0 and x>3] # new list from even number & more than 3
+new_list2 is [4, 6]
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+2. List – Two Dimensional Lists
+
+A two-dimensional list is a list that contains other lists as its elements.
+• Example
+Column 0
+Column 1
+Row 0
+
+alex
+
+manager
+
+Row 1
+
+alice
+
+programmer
+
+Row 2
+
+alan
+
+intern
+
+employee = [['alex', 'manager'], ['alice', 'programmer'], ['alan', 'intern']]
+
+• Accessing Two Dimensional Lists
+employee[0]
+employee[0][0]
+employee[0][1]
+
+# ['alex', 'manager']
+# alex
+# manager
+
+len(employee)
+# 3 from list-elements (number of rows)
+len(employee[0])
+# 2 from ['alex', 'manager'] (number of column of this row)
+len(employee[0][0]) # 1 from alex
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+3. Tuples
+
+Tuples:
+• A tuple is an immutable sequence in Python.
+
+• Immutable means that once created, the contents of a tuple cannot be changed.
+• Tuples offer better performance and safety compared to lists for situations where
+data should not be modified.
+
+• Standard format
+
+my_tuple = (item1, item2, ...)
+
+• Examples:
+
+my_tuple = (1, 2, 3, 4)
+my_tuple_one_item1 = (1,)
+my_tuple_one_item2 = 1
+
+# (1, 2, 3, 4)
+# (1, )
+# 1 – This is an int not a tuple
+
+• Be cautious when create a tuple of one element
+
+(1,) # Make sure to end a tuple statement with an empty comma.
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+3. Tuples
+
+• Tuples support all the same operations as lists, except those that change their contents.
+• Methods: index(item)
+• Built-in Function: len(), min(), max()
+• Slicing expressions
+• in, +, * Operators
+
+• More Tuple Examples
+tuple_a = (1, 2, 3, ['a', 'b'])
+tuple_a[0] = 9
+# TypeError: 'tuple' object does not support item assignment
+tuple_a[3] = 9
+# TypeError: 'tuple' object does not support item assignment
+tuple_a[3][0] = 9 # (1, 2, 3, [9, 'b'])
+
+This is not an error because, in a tuple, the elements themselves (including any lists within the tuple) cannot be
+changed (immutable). However, the content of a list inside a tuple can be modified because lists are mutable.
+tuple_a.index([9, 'b'])
+tuple_a[-1]
+[9, 'b'] in tuple_a
+
+9. Lists and Tuples
+
+# 3 <-- index of number [9, 'b']
+# [9, 'b']
+# True
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+4. Conversion: Lists <-> Tuples
+
+• Convert List to Tuple
+• tuple() function
+
+• Examples:
+
+list_x = [1, 2, 3, 4]
+tuple_x = tuple(list_x)
+
+# (1, 2, 3, 4)
+
+• Convert Tuple to List
+• list() function
+
+• Examples:
+
+tuple_y = ('a', 'b', ('c','d'))
+list_y = list(tuple_y)
+
+9. Lists and Tuples
+
+# ('a', 'b', ('c', 'd'))
+# ['a', 'b', ('c', 'd')]
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+Summary
+
+Understand and be able to work with sequences in Python: List and Tuple
+• Exploring Sequence Basics
+• Creating and Manipulating Lists and Tuples
+• Utilizing Methods and Built-in Functions
+• Converting Between Lists and Tuples
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+Assignment
+
+Do the 9th assignment.
+• Details will be given in the class.
+
+9. Lists and Tuples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+

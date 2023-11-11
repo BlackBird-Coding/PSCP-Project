@@ -1,0 +1,1008 @@
+(06066303 ) Problem Solving and Computer Programming
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 11
+Array Programming with NumPy
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+We will cover the following topics:
+
+By the end of this lecture, you will:
+
+1.
+
+Introduction to NumPy
+
+1.
+
+Have a basic understanding of NumPy.
+
+2.
+
+Array-Oriented Programming
+
+2.
+
+Be able to work with NumPy arrays (ndarray).
+
+•
+•
+•
+•
+•
+
+Creating Arrays
+Array Operations and Calculation Methods
+Performance Comparison: Lists vs. Arrays
+Copies: Shallow vs. Deep
+Reshaping and Transposing
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Introduction to NumPy
+
+Considering this situation:
+
+• You have matrices, A, B, and C.
+• You wish to perform various mathematical operations such as + - * /.
+• How can you achieve this?
+A=
+
+1
+
+2
+
+3
+C=
+
+B=
+
+10
+
+20
+
+30
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+• One approach is to use list to store the data and perform these operations.
+• Here's a breakdown of the difficulty level for each operation:
+•
+•
+•
+•
+
+Addition/Subtraction: These are relatively easy operations.
+Multiplication: This is of moderate difficulty.
+Inversion: This is a difficult operation.
+Dot or Cross Product: These are very difficult operations.
+
+• Alternatively, you can simplify these operations using NumPy arrays.
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Introduction to NumPy
+
+Example: Add two matrices using list
+A = [1, 2, 3]
+B = [10, 20, 30]
+def add_func1(a, b):
+
+def add_func2(a, b):
+
+result = []
+
+result = []
+
+if len(a) == len(b):
+
+if len(a) == len(b):
+
+index = 0
+
+for i, j in zip(a, b):
+
+while index < len(a):
+
+result.append(i + j)
+
+result.append(a[index] + b[index])
+
+else:
+
+index += 1
+
+print('The dimensions must be equal.')
+
+else:
+print('The dimensions must be equal.)
+
+return result
+
+return result
+print(f'A + B = {add_func1(A, B)}') # A + B = [11, 22, 33]
+
+11. Array Programming with NumPy
+
+print(f'A + B = {add_func2(A, B)}') # A + B = [11, 22, 33]
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Introduction to NumPy
+
+Example: Matrix multiplication/Division
+A = [[1, 2], [3, 4]]
+B = [[5, 6], [7, 8]]
+
+def multiply_matrices(a, b):
+if len(a) != len(b) or len(a[0]) != len(b[0]):
+print("Matrix dimensions are incompatible.")
+return None
+result = []
+for i in range(len(a)):
+row = []
+for j in range(len(b[0])):
+total = 0
+for k in range(len(b)):
+total += a[i][k] * b[k][j]
+row.append(total)
+result.append(row)
+return result
+result = multiply_matrices(A, B)
+
+11. Array Programming with NumPy
+
+# [[19, 22], [43, 50]]
+
+def divide_matrices(a, b):
+if len(a) != len(b) or len(a[0]) != len(b[0]):
+print("Matrix dimensions are incompatible.")
+return None
+result = []
+for i in range(len(a)):
+row = []
+for j in range(len(a[0])):
+if b[i][j] != 0:
+row.append(a[i][j] / b[i][j])
+else:
+print("Division by zero.")
+return None
+result.append(row)
+return result
+result = divide_matrices(A, B)
+# [[0.2, 0.33], [0.43, 0.5]]
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Introduction to NumPy
+
+What is NumPy?
+
+• NumPy stands for Numerical Python
+
+• A widely used open-source Python library in the fields of science and engineering.
+• You need to import it to use its functionality. For example:
+import numpy as np
+
+• Key Features of NumPy:
+•
+•
+•
+•
+
+Multidimensional array support with ndarray.
+Efficient and speedy mathematical operations.
+Supports vectorization, eliminating the need for loops when working with entire arrays.
+Offers common algorithms for tasks like sorting and set operations.
+
+Additional Resource: https://numpy.org/doc/stable/user/absolute_beginners.html
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+1. Introduction to NumPy
+
+Harris, C.R., Millman, K.J., van der Walt, S.J. et al. Array programming with NumPy. Nature 585, 357–362 (2020). https://doi.org/10.1038/s41586-020-2649-2
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+1. Introduction to NumPy
+
+How to import NumPy?
+• There are several ways to import modules into your code. For example:
+• Use import to import module:
+
+import numpy
+my_array = numpy.array('1 2; 3 4')
+import numpy as np
+my_array = np.array('1 2; 3 4’)
+
+• Use import to import something specific from a module:
+import math
+math.pi # math.pi = 3.141592653589793
+
+• Import only a specific variable from a module:
+from math import pi # Import only the pi variable from the math module
+pi # pi = 3.141592653589793
+
+• Import with an alias:
+
+from math import pi as PIE
+PIE # PIE = 3.141592653589793
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+1. Introduction to NumPy
+
+What is a NumPy Array?
+A NumPy array is a central data structure within the NumPy library. It represents a grid of values
+with these key characteristics:
+• All its elements share the same data type, known as the array's dtype.
+• You can access and index elements using tuples of nonnegative integers, Booleans, another
+array, or integers.
+• The array's rank indicates the number of dimensions.
+• The shape of the array is defined by a tuple of integers, specifying its size along each dimension.
+• Examples:
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+1. Introduction to NumPy
+
+Accessing Elements in a NumPy Array
+• NumPy arrays are like grids of data.
+• Accessing specific elements:
+•
+•
+•
+•
+
+Use coordinates (row, column) to pinpoint a value.
+Employ True/False conditions to select elements.
+Use another array for selection.
+Access by a single number (integer).
+
+• Example:
+Grid:
+1 2 3
+4 5 6
+7 8 9
+Access "6" by (row 2, column 3) or [2, 3]. (Using Tuples of Nonnegative Integers)
+Select all > 4: [5, 6, 7, 8, 9]. (Using Boolean)
+Access by index: array[4] = 5. (Using Integers)
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+1. Introduction to NumPy
+
+Rank of a NumPy Array
+•
+•
+•
+•
+•
+
+The "rank" indicates dimensions.
+1D array: Rank 1 (like a list).
+2D array: Rank 2 (rows and columns).
+Higher ranks for more dimensions.
+Example:
+• 1D Array: [1 2 3] (Rank 1).
+• 2D Array (Rank 2 - Rows and Columns ):
+1
+4
+
+2
+5
+
+3
+6
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+1. Introduction to NumPy
+
+Shape of a NumPy Array
+• The "shape" specifies size in each dimension.
+• Example shapes:
+• 1D: (5,) - 5 elements.
+• 2D: (3, 3) - 3 rows, 3 columns.
+• 3D: (2, 4, 2) - 2 layers, 4 rows, 2 columns.
+
+• Example:
+
+• 1D Array: [1, 2, 3, 4, 5] (Shape: (5,)).
+• 2D Array (Shape: (2, 3)) - 2 rows, 3 columns:
+1
+4
+
+2
+5
+
+3
+6
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+1. Introduction to NumPy
+
+Harris, C.R., Millman, K.J., van der Walt, S.J. et al. Array programming with NumPy. Nature 585, 357–362 (2020). https://doi.org/10.1038/s41586-020-2649-2
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+2. Array-Oriented Programming
+
+Array-Oriented Programming
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Creating Arrays
+Array Attributes
+Performance Comparison: Lists vs. Arrays
+Array Operators
+NumPy Calculation Methods
+Universal Functions (ufunc)
+Indexing and Slicing
+Copies: Shallow vs. Deep
+Reshaping and Transposing
+Solving Linear Systems of Equations with NumPy
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+2. Array-Oriented Programming
+
+Creating Arrays using array() function
+
+• To create arrays in NumPy, you can use the array() function.
+• This function accepts various types of arguments, including individual elements, collections of
+elements, or other arrays.
+• It copies the contents of its argument into the resulting array.
+
+• Examples:
+
+import numpy as np
+
+# Creating a 1D NumPy array from a list
+np_array1_1D = np.array([1, 2, 3]) # Result: [1 2 3]
+# Creating a 2D NumPy array from a nested list
+my_list_2D = [[1, 2], [3, 4], [5, 6]]
+np_array2_2D = np.array(my_list_2D) # Result:
+# Creating a 1D NumPy array from a tuple
+my_tuple = (1, 2, 3, 4)
+np_array3_1D = np.array(my_tuple) # Result: [1 2 3 4]
+# Creating a 1D NumPy array from a set
+my_set = {1, 2, 3, 4}
+np_array4_1D = np.array(my_set) # Result: [1 2 3 4]
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+2. Array-Oriented Programming
+
+Creating Array using Functions
+
+NumPy Data Types: McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython. " O'Reilly Media, Inc.", 2012.
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+2. Array-Oriented Programming
+
+Array Attributes
+• An array object provides attributes – attributes provide valuable information about
+their structure and content, including details about the types of elements within the
+array.
+
+• An array element’s types
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+2. Array-Oriented Programming
+
+Array Attributes – NumPy Data Types
+
+NumPy Data Types: McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython. " O'Reilly Media, Inc.", 2012.
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+2. Array-Oriented Programming
+
+Array Attributes
+• The number of dimensions and the dimension of an array.
+
+• Dimension: The ndim attribute contains the number of dimensions of the array.
+
+• Shape: The shape attribute contains a tuple specifying the array's dimensions (rows, columns).
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+2. Array-Oriented Programming
+
+Array Attributes
+• The number of elements in an array and the size of each element.
+
+• Size: The size attribute contains the total number of elements.
+• Itemsize: The itemsize attribute contains the number of bytes required to store each element.
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+2. Array-Oriented Programming
+
+Performance Comparison: List vs. Array
+• NumPy arrays outperform Python lists in terms of speed.
+• You can measure this performance using the %timeit command.
+• The %timeit approximates the performance by averaging the duration of operations
+%timeit a = [i for i in range(100_000_000)]
+# 3.17 s ± 21.9 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+%timeit c = (i for i in range(100_000_000))
+# 312 ns ± 4.61 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+%timeit b = np.arange(100_000_000)
+# 79.8 ms ± 1.23 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+%timeit sum_list = sum([i for i in range(10_000_000)])
+# 529 ms ± 6.78 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+%timeit sum_tuple = sum((i for i in range(10_000_000)))
+# 387 ms ± 3.69 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+%timeit sum_np = np.arange(10_000_000).sum()
+# 11.2 ms ± 123 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+
+11. Array Programming with NumPy
+
+Data
+Types
+
+Average Usage Time/Loop
+Create
+100,000,000
+
+3.17 s ± 21.9 ms
+list
+312 ns ± 4.61 ns
+tuple
+np.array 79.8 ms ± 1.23 ms
+
+Sum
+10,000,000
+529 ms ± 6.78 ms
+387 ms ± 3.69 ms
+11.2 ms ± 123 µs
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+2. Array-Oriented Programming
+
+Array (Element-Wise) Operators
+• Arithmetic Operations between Arrays and Numeric Values
+
+Broadcasting
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+2. Array-Oriented Programming
+
+Array (Element-Wise) Operators
+• Arithmetic operations between arrays require that the two arrays are of the same size
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+2. Array-Oriented Programming
+
+NumPy Calculation Methods:
+• By default, NumPy uses all elements in calculations, regardless of the array's shape.
+• For example, when calculating the mean of an array, it sums all elements and divides by
+the total count.
+• In a 2D array, you can calculate row and column means separately.
+
+All row values within each column
+All column values within each row
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+2. Array-Oriented Programming
+
+Universal Functions (ufunc):
+• Ufuncs are standalone functions that perform element-wise operations on arrays.
+• For example, you can use ufuncs for tasks like calculating square roots or adding two
+arrays.
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+2. Array-Oriented Programming
+
+Universal Functions (ufunc) – Unary (Single Array) Functions Available
+
+NumPy Data Types: McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython. " O'Reilly Media, Inc.", 2012.
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+2. Array-Oriented Programming
+
+Universal Functions (ufunc) – Binary (Two Arrays) Functions Avaiable
+
+NumPy Data Types: McKinney, Wes. Python for data analysis: Data wrangling with Pandas, NumPy, and IPython. " O'Reilly Media, Inc.", 2012.
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+2. Array-Oriented Programming
+
+Indexing and Slicing
+• One-Dimensional Array: Indexing and slicing using list and tuple techniques.
+• Two-Dimensional Array: Indexing and slicing.
+
+11. Array Programming with NumPy
+
+1
+
+2
+
+3
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+7
+
+8
+
+9
+
+1
+
+2
+
+3
+
+[7, 8, 9]
+
+1
+
+2
+
+3
+
+[4, 5]
+
+4
+
+5
+
+6
+
+[7, 8, 9]
+
+4
+
+5
+
+6
+
+[[4, 5]]
+
+7
+
+8
+
+9
+
+7
+
+8
+
+9
+
+[[7, 8, 9]]
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+2. Array-Oriented Programming
+
+Copies: Shallow (Siew) vs. Deep
+• Shallow Copies: Provide a view of the original data.
+
+ Shallow copy
+
+Array’s objects are separated
+
+ Content is still shared
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+2. Array-Oriented Programming
+
+Copies: Shallow (View) vs. Deep
+• Deep copies return independent copies of the original data.
+
+ Deep copy
+
+ Content is completely separated
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• reshape vs. resize
+• reshape: Returns a view (shallow copy) of the original array with a new dimension.
+• resize: Modifies the original array's shape.
+• flatten vs. ravel
+• flatten: Converts a multidimensional array into a single-dimensional array with a deep copy.
+• ravel: Similar to flatten but uses a shallow copy.
+
+• Transpose: Flips or swaps rows and columns
+• array.T provides a shallow copy.
+
+• Stacking: Horizontal and Vertical
+
+• Combining arrays by adding more columns or rows
+• hstack: Horizontal stacking
+• vstack: Vertical stacking
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• reshape vs. resize
+
+ Dimension doesn’t change
+
+ Dimension changed
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+33
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• flatten
+
+ Deep copy
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+34
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• ravel
+ Shallow copy
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+35
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• Transpose: Flips or swaps rows and columns
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+36
+
+2. Array-Oriented Programming
+
+Reshaping and Transposing:
+• hstack and vstack
+
+• Combining Arrays Using a Tuple:
+
+ Horizontal stacking
+
+ Vertical stacking
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+37
+
+2. Array-Oriented Programming
+
+Solving System Linear Equations (SLE) with NumPy Array:
+• Considering a linear equation 8𝑥𝑥 = 4, what is a value of 𝑥𝑥?
+1
+8
+
+• Finding a solution is simple, multiplying both sides with , and therefore, 𝑥𝑥 = 0.5
+
+• Considering a system of linear equations, find 𝑥𝑥 and 𝑦𝑦
+6𝑥𝑥 − 2𝑦𝑦 = 30
+4𝑥𝑥 + 2𝑦𝑦 = 10
+
+(1)
+(2)
+
+• You can use several techniques to find 𝑥𝑥 and 𝑦𝑦 such as:
+
+• Substitution: replacing 𝑥𝑥 in terms of 𝑦𝑦
+• Elimination: add one equation to another to eliminate one variable
+
+• What is you have 4 variables or more?
+
+• NumPy Array (or Matrix) can be used to solve this type of problem efficiently
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+38
+
+2. Array-Oriented Programming
+
+Solving System Linear Equations (SLE) with NumPy Array:
+• Look at the equations again
+
+(1)
+(2)
+
+6𝑥𝑥 − 2𝑦𝑦 = 30
+4𝑥𝑥 + 2𝑦𝑦 = 10
+
+• Rearrange the problem in terms of 𝐴𝐴𝐴𝐴 = 𝑏𝑏, where
+• 𝐴𝐴 is the coefficient matrix, represented as 𝐴𝐴 = 6 −2
+𝑥𝑥
+
+• 𝑥𝑥 represents the variables, given as 𝑥𝑥 = 𝑦𝑦
+
+• 𝑏𝑏 denotes the solution, defined as 𝑏𝑏 = 30
+
+4
+
+2
+
+10
+
+• You can find the solution using the formula 𝑏𝑏 = 𝐴𝐴−1 𝑥𝑥, where 𝐴𝐴−1 is the inverse of the
+matrix 𝐴𝐴.
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+39
+
+2. Array-Oriented Programming
+
+Solving System Linear Equations (SLE) with NumPy Array:
+• Implement the solution in Python
+• Approach #1
+
+ np.matmul() is the matrix multiplication
+
+• Approach #2
+ np.linalg.solve() is the solution function
+
+• Approach #3 (Numpy Matrix)
+
+ A.I is the matrix inversion
+
+• Proof
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+40
+
+2. Array-Oriented Programming
+
+SLE Application Example
+• Suppose you plan to deposit a total of $8,000 into two bank accounts—one offering a
+4% annual simple interest rate and the other a 6% rate. Your goal is to earn $350 in
+annual interest.
+• How much should you deposit in each bank account?
+• Define a system of linear equations:
+𝑥𝑥 + 𝑦𝑦 = 8000
+(Eq1: Represents the total deposit)
+0.04𝑥𝑥 + 0.06𝑦𝑦 = 350
+(Eq2: Represents the annual interest goal)
+• Solve for the two variables using NumPy.
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+41
+
+Summary
+
+Understanding and Working with NumPy Arrays (and Matrices)
+• Learn the basics of working with NumPy:
+• Importing the NumPy Module
+• Arrays (and Matrices).
+•
+•
+•
+•
+•
+•
+
+Creating Arrays
+Array Attributes
+Indexing and Slicing
+Operations and Calculations
+Performance Optimization
+Copies: Shallow and Deep
+
+• Solving Linear Equations
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+42
+
+Assignment
+
+Do the 11th assignment
+• Details will be given in the class
+
+11. Array Programming with NumPy
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+43
+
+

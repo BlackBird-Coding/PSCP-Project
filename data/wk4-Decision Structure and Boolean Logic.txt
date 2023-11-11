@@ -1,0 +1,602 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 04
+Decision Structure and Boolean Logic
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1. Overview
+2. Decision Structure: if, if-else,
+3. Logical Operator: and, or, not
+
+4. Decision Structure and Boolean Logic
+
+if-elif-else
+
+1. Learn the basics of Decision Structures and
+Boolean Logic.
+2. Use Decision Structures effectively in your code.
+3. Understand and apply Logical Operators to
+create more powerful conditions and expressions.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Overview of Decision Structure and Boolean Logic
+
+Decision Structures and Boolean Logic
+
+Decision structures and Boolean logic are core concepts in programming.
+
+ Decision structures (e.g., if, if-else, if-elif-else ) enable conditional choices in code execution based on true or
+false conditions.
+ Boolean logic involves evaluating expressions with True and False values to make decisions and control program flow.
+ Decision Structure Example
+temperature = float(input("Enter the temperature in Celsius: "))
+if temperature >= 40:
+Start
+print("It's a hot day.")
+
+ Boolean Logic Example
+
+is_hot = temperature >= 40
+if is_hot:
+print("The temperature is hot.")
+
+GET temperature
+
+temperature>= 40
+
+True
+
+DISPLAY It is a hot day
+
+False
+End
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Overview of Decision Structure and Boolean Logic
+
+Boolean Values & Comparison Operators
+Boolean values
+
+is_raining = True
+is_sunny = False
+
+Comparison operators example
+x = 10
+y = 5
+print(x > y)
+print(x < y)
+print(x == y)
+
+# Output: True
+# Output: False
+# Output: False
+
+Algebraic Operator
+
+Python Operator
+
+Example
+
+>
+
+>
+
+𝑥𝑥 > 𝑦𝑦
+
+x is greater than y
+
+≥
+
+≥
+
+𝑥𝑥 ≥ 𝑦𝑦
+
+x is greater than or equal to y
+
+<
+≤
+=
+≠
+
+4. Decision Structure and Boolean Logic
+
+<
+≤
+
+==
+!=
+
+𝑥𝑥 < 𝑦𝑦
+𝑥𝑥 ≤ 𝑦𝑦
+
+𝑥𝑥 == 𝑦𝑦
+𝑥𝑥 ! = 𝑦𝑦
+
+Description
+x is less than y
+
+x is less than or
+x is equal to y
+
+equal to y
+
+x is not equal to y
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+2. Decision Structure: if statement
+
+The if statement and its syntax in Python.
+
+The if statement creates decision structures, allowing programs to have multiple paths of execution.
+It executes specific statements only when a Boolean expression evaluates to true.
+ if syntax
+if condition:
+statement
+statement
+etc.
+
+Example 1 - Checking if a number is positive
+num = 5
+
+if num > 0:
+print("The number is positive.")
+
+4. Decision Structure and Boolean Logic
+
+num > 0
+
+True
+
+DISPLAY “The number is
+positive”
+
+False
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+2. Decision Structure: if statement
+
+Example 2 – if with multiple statements (code block)
+raining_chance = 80
+if raining_chance >= 80:
+print(“Use an umbrella.")
+print(“Use a raincoat.")
+
+raining_chance>= 80
+False
+
+4. Decision Structure and Boolean Logic
+
+True
+
+DISPLAY “Use an umbrella”
+
+DISPLAY “Use a raincoat”
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+2. Decision Structure: if statement
+
+Example 3 - Checking if a number is even or odd
+num = 7
+if num % 2 == 0:
+print("The number is even.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. Decision Structure: if statement
+
+Example 4 - Checking if it's a hot day
+temperature = 32
+hot_temperature = 30
+if temperature >= hot_temperature:
+print("It's a hot day! Stay hydrated.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. Decision Structure: if statement
+
+Python enables string comparison, allowing the creation of decision structures to evaluate string values.
+Example 5 - Checking user privileges
+username = "admin"
+if username == "admin":
+print("User has administrator privileges.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+2. Decision Structure: if statement
+
+Example 6 – String comparison by using ASCII code
+if 'a' < 'b’:
+# ASCII code of ‘a’ is 97 and ‘b’ is 98
+print('The letter a is less than the letter b.’)
+
+Example 7 – String comparison by using ASCII code
+ Compare one letter at the time, from left to right
+
+if ‘Mary’ > ‘Mark’:
+print('Mary is greater than Mark')
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+2. Decision Structure: if-else statement
+
+The if-else Statements and its syntax in Python.
+
+The if-else is a control structure executing different code blocks based on a condition.
+It evaluates a Boolean expression, running the "if" block if true, or the "else" block if false.
+ if-else syntax
+if condition:
+statement
+statement
+etc.
+else:
+statement
+statement
+etc.
+
+num > 0
+
+True
+
+DISPLAY “The number is
+positive”
+
+False
+
+DISPLAY “The number is
+negative”
+
+Example 8 - Checking if a number is positive or negative
+num = -5
+
+if num > 0:
+print("The number is positive.")
+else:
+print("The number is negative.")
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+2. Decision Structure: if-else statement
+
+Example 9 - Checking if a student passed or failed
+score = 75
+passing_score = 60
+if score >= passing_score:
+print("Congratulations! You passed the exam.")
+else:
+print("Unfortunately, you did not pass this time.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+2. Decision Structure: if-else statement
+
+Example 10 - Categorizing age into child, teenager, or adult
+ Nested if statement
+age = 25
+if age < 12:
+print("You are a child.")
+else:
+if age <= 19:
+print("You are a teenager.")
+else:
+print("You are an adult.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+2. Decision Structure: if-elif-else statement
+
+The if-elif-else Statements and its syntax in Python.
+
+The if-elif-else is a decision-making structure based on conditions.
+It checks conditions one by one, executing the first true condition's code block.
+If none are true, it moves to elif (else if) conditions and checks them sequentially.
+The first true elif condition's code block is executed if found.
+If no conditions are true, the "else" block (optional) runs as a default action.
+ if-elif-else syntax
+if condition1:
+# Code block
+elif condition2:
+# Code block
+elif condition3:
+# Code block
+else:
+# Code block
+
+4. Decision Structure and Boolean Logic
+
+executed if condition1 is True
+executed if condition1 is False and condition2 is True
+executed if both condition1 & condition2 are False, and condition3 is True
+executed if all conditions are False
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+2. Decision Structure: if-elif-else statement
+
+Example 11 – Revisited Example 10: Categorizing age into child, teenager, or adult
+age = 25
+
+if age < 12:
+print("You are a child.")
+elif age <= 19:
+print("You are a teenager.")
+else:
+print("You are an adult.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+2. Decision Structure: if-elif-else statement
+
+Example 12 - Assigning letter grades
+score = 85
+if score >= 90:
+grade = "A"
+elif score >= 80:
+grade = "B"
+elif score >= 70:
+grade = "C"
+elif score >= 60:
+grade = "D"
+else:
+grade = "F“
+print(f"Your score: {score}. Grade: {grade}")
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+3. Logical Operator
+
+Logical Operators
+
+Logical operators are essential tools for creating more complex and flexible conditions in programming,
+enabling you to control the flow of execution and make decisions based on multiple conditions.
+ and and or operators combine multiple Boolean expressions into compound expressions.
+ not operator reverses the truth value of a Boolean expression.
+Operator
+
+Description
+
+and
+
+Returns true only if both expressions are true.
+
+or
+
+Returns true if at least one expression is true.
+
+not
+
+Negates the truth value of a single expression.
+
+4. Decision Structure and Boolean Logic
+
+Example
+
+Result
+
+True and True
+True and False
+False and True
+False and False
+True or True
+True or False
+False or True
+False or False
+not True
+not False
+
+True
+False
+False
+False
+True
+True
+True
+False
+False
+True
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+3. Logical Operator
+
+Example 13 - Logical Operators
+age = int(input("Enter your age: "))
+income = float(input("Enter your monthly income (in USD): "))
+# Using logical operators to determine loan eligibility
+if age >= 18 and income >= 2000:
+print("Congratulations! You are eligible for a loan.")
+else:
+print("Sorry, you do not meet the eligibility criteria.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+3. Logical Operator
+
+Example 14 - Checking if a year is a leap year
+year = 2024
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+print("It's a leap year.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+3. Logical Operator
+
+Example 15 - Age group eligibility
+age = int(input("Enter your age: "))
+# Using logical operators to check age group eligibility
+if age >= 13 and age <= 19:
+print("You are eligible for the Teenage category.")
+elif age >= 20 and age <= 35:
+print("You are eligible for the Young Adults category.")
+elif age >= 36 and age <= 60:
+print("You are eligible for the Adults category.")
+elif age > 60:
+print("You are eligible for the Seniors category.")
+else:
+print("You do not meet the age requirements for any category.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+3. Logical Operator
+
+Example 16 - Vacation destination suggestion
+budget = float(input("Enter your budget (in USD): "))
+is_raining = input("Is it raining at your current location? (yes/no): ").lower()
+# Using logical operators to suggest vacation destination
+if budget >= 500 and not is_raining:
+print("You can visit the beach paradise!")
+elif budget >= 300 and not is_raining:
+print("How about exploring the mountain trails?")
+elif budget >= 100:
+print("Enjoy a city tour and try local cuisines!")
+else:
+print("Stay home and have a cozy indoor day.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+3. Logical Operator
+
+Example 17 - Solving the color-coded puzzle
+color = input("Enter the color of the path you choose (red/blue/green): ").lower()
+is_locked = input("Is the path locked? (yes/no): ").lower()
+has_key = input("Do you have the key? (yes/no): ").lower()
+# Using logical operators to solve the color-coded puzzle
+if color == "red" and not is_locked:
+print("Congratulations! You reached the treasure room.")
+elif color == "blue" and has_key:
+print("You unlocked the door and entered the secret garden.")
+elif color == "green" and not is_locked and has_key:
+print("You found a hidden passage to the hidden chamber.")
+else:
+print("The path leads to a dead end. Try another route.")
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+Summary
+
+Understand the Decision Structure and Boolean Logic
+Boolean Logic
+
+ True or False
+
+Decision Structure
+ if, if else,
+
+Logical Operator
+
+and
+
+if elif else
+
+ and, or, and not
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+Assignment
+
+Do the 4th Assignment
+
+Detail is given in the Classroom
+
+4. Decision Structure and Boolean Logic
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+

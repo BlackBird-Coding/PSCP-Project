@@ -1,0 +1,1140 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 02
+Problem solving, computational thinking, and algorithms
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1. Problem solving (PS) and Computational thinking (CT) 1. Understand the concept of PS and CT
+ Problem solving: concept and strategies
+ Computational thinking: concept and elements
+
+2. Fundamental of Algorithm
+
+ Concepts
+ Examples: Sorting and searching
+
+2. Problem solving, computational thinking, and algorithms
+
+ PS strategies
+ CT process
+
+2. Basic knowledge of Algorithms:
+ Definition
+ Exploitation
+ Examples
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Problem Solving & Computational Thinking
+
+What is the problem-solving?
+
+ Problem solving (PS) is the process of constructing and applying mental representations of problems to finding solutions to
+those problems that are encountered in nearly every context.
+ Problem solving is a crucial intellectual skill in daily life, requiring skills like learning, planning, concept development, and
+reasoning. It is essential in schools, universities, and socialization, as humans cannot avoid mistakes and learn from them.
+
+2. Problem solving, computational thinking, and algorithms
+
+Source: Internet
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Problem Solving & Computational Thinking
+
+What is the problem-solving?
+
+ Problem solving (PS) is the process of constructing and applying mental representations of problems to finding solutions to
+those problems that are encountered in nearly every context.
+ Problem solving is a crucial intellectual skill in daily life, requiring skills like learning, planning, concept development, and
+reasoning. It is essential in schools, universities, and socialization, as humans cannot avoid mistakes and learn from them.
+
+2. Problem solving, computational thinking, and algorithms
+
+Source: Internet
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Problem Solving & Computational Thinking
+
+What is the problem-solving?
+
+ Problem solving (PS) is the process of constructing and applying mental representations of problems to finding solutions to
+those problems that are encountered in nearly every context.
+ Problem solving is a crucial intellectual skill in daily life, requiring skills like learning, planning, concept development, and
+reasoning. It is essential in schools, universities, and socialization, as humans cannot avoid mistakes and learn from them.
+
+2. Problem solving, computational thinking, and algorithms
+
+Source: Internet
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Problem Solving & Computational Thinking
+
+Can a bird solve a problem to feed itself?
+
+"Kea" New Zealand Parrot ("เคีย" นกแก้วยักษ์ แห่งนิวซีแลนด์)
+What do you see?
+where there's a will there's a way
+trials & errors
+Reinforcement learning (RL)
+ Actions vs. Rewards
+
+???
+
+2. Problem solving, computational thinking, and algorithms
+
+https://www.youtube.com/watch?v=7W7hEUGtv4U
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+1. Problem Solving & Computational Thinking
+
+Can a crow solve an 8-stages puzzle to get a reward?
+What else do you see?
+Problem understanding
+Problem decomposition
+Reasoning
+Critical thinking
+???
+
+https://www.youtube.com/watch?v=cbSu2PXOTOc
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+1. Problem Solving & Computational Thinking
+
+Why Problem solving is so important?
+
+Fig. 1: The important of Problem-Solving Skill
+
+“Put simply, the world no longer rewards people just for what they know—Google knows everything—
+but for what they can do with what they know. Problem solving is at the heart of this, the capacity of an
+individual to engage in cognitive processing to understand and resolve problem situations where a
+method of solution is not immediately obvious.”
+Beno Csapo and Joachim Funke (eds.), The Nature of Problem Solving: Using Research to Inspire 21st Century Learning. (OECD
+Publishing, 2017).
+
+Future of Jobs: Employment, Skills and Workforce Strategy for the
+Fourth Indus trial Revolution (World Economic Forum, 2016).
+
+Conn, Charles, and Robert McLean. Bulletproof Problem Solving: The One Skill that Changes Everything. John Wiley & Sons, 2019.
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+1. Problem Solving & Computational Thinking
+
+Problem Solving: 4 Aspects
+1.
+2.
+3.
+4.
+
+Fid.2: Dimensions of problems and issues needing resolution
+
+Problem
+Problem Representation
+Problem Solver
+Problem Context
+
+Seel, Norbert M., ed. Encyclopedia of the
+Sciences of Learning. Springer Science &
+Business Media, 2011.
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+1. Problem Solving & Computational Thinking
+
+1. Nature of Problem
+
+Two types of problems:
+Well-structured problem
+
+Consists of sets of initial states, goals states, and path constraints
+Solving a problem is to find a path through the problem space
+
+ Start with initial states, passing along paths that satisfy the path constraints and ends in the goal state
+
+Ill-structured problem (most of today’s problems)
+
+Goal states and path constraints are often unknown
+Categorize into 3 dimensions (see Fig. 2): structuredness, complexity, and dynamicity
+
+ Dynamicity is the most difficult to manage and could amplify the degrees of structuredness and complexity
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+1. Problem Solving & Computational Thinking
+
+2. Nature of Problem Representation
+
+How a solver mentally represents the information contained within the problem
+Directly related to the solver's existing knowledge of the content of the problem
+
+Example
+
+Some children tend to mentally visualize number words as raised fingers, while other children
+consider numbers as abstract entities, depends on an individual's prior knowledge or
+background experiences, for example
+One
+Sixteen
+If you can't explain it simply, you don't understand it well enough. Albert Einstein
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+1. Problem Solving & Computational Thinking
+
+3. Nature of Problem Solver
+
+Problem solving is affected by the characteristics of the problem solver
+Top 4 components that affects the problem-solving competence of a person are
+Prior knowledge
+Previous experience
+Epistemological beliefs (ความเชื่อว่าด้วยความรู ้ - ญาณวิทยา)
+Reasoning skills
+
+Other factors
+
+Primary focus, concerns and perspective when solving different kinds of problem in different contexts
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+1. Problem Solving & Computational Thinking
+
+Are these images all Tuk-Tuk?
+
+2. Problem solving, computational thinking, and algorithms
+
+1
+
+3
+
+2
+
+4
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+1. Problem Solving & Computational Thinking
+
+Are these images all Tuk-Tuk?
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+1. Problem Solving & Computational Thinking
+
+Problem Solver: Novice vs. Expert
+
+Experts possess 50,000 specialized knowledge chunks, linked together without disconnected
+facts.
+Expert can not be taught (within 4-5 years), but it is reasonable to mold proficient problem
+solvers who have the potential to become experts after more seasoning in industry
+The differences between novices and experts show some areas that educators can work on to
+improve the problem-solving ability of students
+Students (Novices) need to learn the fundamentals and do deep processing. instead of single
+facts, knowledge should be structured so that patterns can be recalled.
+Several observations on how novice problem solvers differ from experts are listed in Table 1
+Wankat, Phillip C., and Frank S. Oreovicz, eds. Teaching engineering. Purdue University Press, 2015.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+1. Problem Solving & Computational Thinking
+
+Table – 1: Comparison of novice and expert problem solvers
+Characteristic
+
+Novices
+
+Experts
+
+Characteristic
+
+Novices
+
+Experts
+
+Memory
+
+Small pieces
+Few items
+Try once and then give up
+
+“Chunks” or pattern
+~ 50,000 items
+Can-do if persist
+
+Limits
+
+Do not calculate
+
+Anxious
+Superficial details
+Difficulty redescribing
+
+Confident
+Fundamentals
+Many techniques to redescribe
+
+Equations
+
+Memorize or look up detailed
+equations for each circumstance
+
+May calculate to get quick fix
+on solution
+Use fundamental relations to derive needed
+result
+
+Solution procedures
+
+Slow and inaccurate
+Jump to conclusion
+
+“Compiled” procedures
+Equation and solution method are single
+procedure
+
+Monitoring solution
+progress
+
+Do not do
+
+Slow
+
+Fast and accurate
+Take time defining tentative problem
+May redefine several times
+~ 4 times faster
+
+“Uncompiled”
+Decide how to solve after writing
+equation
+
+If stuck
+
+Work backward
+Trial and error
+Don't know what is relevant
+
+Work forwards with known procedures
+Use a strategy
+Recognize relevant information
+
+Guess
+Quit
+
+Accuracy
+
+Cannot draw inferences from
+incomplete data
+Do NOT analyze into parts
+
+Can draw inferences
+
+Not concerned
+DO NOT Check
+Do not do
+Ignore it
+
+Keep track
+Check off versus strategy
+Use Heuristics
+Persevere
+Brainstorm
+Very accurate
+Check and recheck
+Do from broad experience
+Learn what should have done
+Develop new problem-solving methods
+Use paper and pencil
+Very active
+Sketch, write questions, flow paths.Subvocalize
+(talk to selves)
+
+Attitude
+Categorize
+Problem
+statement
+
+Simple welldefined
+problems
+Strategy
+Information
+
+Parts (harder
+problems)
+First step done
+(harder
+problems)
+Sketching
+
+Try to calculate
+(Do It step)
+Often not done
+
+2. Problem solving, computational thinking, and algorithms
+
+Analyze parts
+Proceed in steps
+Look for patterns
+Define and draw
+Sketch
+Explore
+Considerable time
+Abstract principles
+Show motion
+
+Evaluation of result
+Mistakes or failure to
+solve problems
+Actions
+
+Sit and think
+Inactive
+Quiet
+
+Decisions
+
+Do NOT understand process
+No clear criterion
+
+Understand decision process
+Clear criterion
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+1. Problem Solving & Computational Thinking
+
+4. Nature of Problem-Solving Context
+Problems also vary by context
+
+In different situations and disciplines, people solve different kinds of problems
+
+Example
+
+Medical students perform better on statistical and conditional reasoning problem than
+students in art which do not learn such forms of reasoning
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+1. Problem Solving & Computational Thinking
+
+Problem Solving Models/Strategies
+1. Bransford’s IDEAL model (1960)
+
+1. Identify the problem
+2. Define the context of the problem – thinking about it and sorting out the relevant information
+3. Explore possible strategies – looking at alternatives, brainstorming, and checking out different points of
+view
+4. Act on best solution
+5. Look back and learn
+Foshay, Rob, and Jamie Kirkley. "Principles for teaching problem solving." Technical paper 4.1 (2003): 1-16.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+1. Problem Solving & Computational Thinking
+
+Problem Solving Models/Strategies (Cont)
+2. Seven Steps Approach
+1. Define the problem
+
+How do you define a problem in a precise way to meet the decision maker’s needs?
+
+2. Disaggregate (Breakdown)
+
+How do you disaggregate the issues and develop hypotheses to be explored?
+
+3. Prioritize (Selection)
+
+How do you prioritize what to do and what not to do?
+
+4. Workplan (Action)
+
+How do you develop a workplan and assign analytical tasks?
+
+5. Analyze
+
+How do you decide on the fact gathering and analysis to resolve the issues, while avoiding cognitive biases?
+
+6. Synthesize
+
+How do you go about synthesizing the findings to highlight insights?
+
+7. Communicate
+
+How do you communicate them in a compelling way?
+
+Fig. 3: The Seven Step of Problem Solving
+
+Conn, Charles, and Robert McLean. Bulletproof Problem Solving: The One Skill that Changes Everything. John Wiley & Sons, 2019.
+https://bulletproofproblemsolving.com/case-studies/
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+1. Problem Solving & Computational Thinking
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+1. Problem Solving & Computational Thinking
+
+Example – Does Sydney Airport Have Adequate Capacity?
+1. Define the problem
+2. Disaggregate (Breakdown)
+3. Prioritize (Selection)
+4. Workplan (Action)
+5. Analyze
+6. Synthesize
+7. Communicate
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+1. Problem Solving & Computational Thinking
+
+Example – Does Sydney Airport Have Adequate (เพียงพอ) Capacity?
+1. Define the problem
+
+Will the airport capacity be adequate in the future? (What do you think? Is it a good problem statement?)
+If the problem statement was bounded around passenger airport capacity, you don’t need to worry about:
+ Policy: Second airport
+ Accessibility: Where? Transportation? Connection to the city?
+ Safety? Environment?
+
+This “Boundary” will help you to solve the problem
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+1. Problem Solving & Computational Thinking
+
+Example – Does Sydney Airport Have Adequate (เพียงพอ) Capacity?
+2. Disaggregate (Breakdown)
+Focus on “Capacity”
+First Breakdown
+
+ Airport Capacity  Supply
+ Passenger  Demand
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+1. Problem Solving & Computational Thinking
+
+Example – Does Sydney Airport Have Adequate (เพียงพอ) Capacity?
+2. Disaggregate (Breakdown)
+Second Breakdown
+ Supply
+
+ Number of Runways – fixed for the short term (can’t add/remove)
+ Capacity/runway – fixed by aircraft types
+ Runway utilization – how effectively we can use it?
+
+ Demand
+
+ What type of passenger? Domestic or international?
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+1. Problem Solving & Computational Thinking
+
+Example – Does Sydney Airport Have Adequate (เพียงพอ) Capacity?
+2. Disaggregate (Breakdown)
+Third Breakdown
+
+ Supply – Runway utilization
+ Operating hours
+
+ How often is the maintenance? How many working hours? Whether or maintenance
+
+ Number of planes to land per hour
+ Spacing between aircraft movement
+
+ Number of onboard passengers
+
+ Some of the above can do, some don’t
+
+ Can: reduce take-off/ landing time of aircraft, maximize people/plane with bigger aircraft, zoning aircraft size at peak hour, etc.
+ Can’t (difficult): operating hours because of a curfew period (nighttime due to residents near the airport), etc.
+
+This breakdown helps you to
+
+ Tasks prioritization (3), make an actionable plan (4), analyze (5) and synthesize the result (6), and tell the story (7)
+*Note: The Sydney airport got the third runway some years later and has managed the impact of significant traffic growth by working on the critical variables identified in the case.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+1. Problem Solving & Computational Thinking
+
+What is computational thinking (CT)?
+
+ CT is the thought process for creating solutions that can be carried out by a computer. “Everything You Need to Ace Computer
+Science and Coding in One Big Fat Notebook”, Workman Publishing Company, 2020.
+ CT is the thought processes involved in formulating a problem and expressing its solution(s) in such a way that a computer—
+human or machine—can effectively carry out. Wing, J. (2014), “Computational thinking benefits society”. Social Issues in
+Computing.
+ CT is the mental activity for abstracting problems and formulating solutions that can be automated. Yadav, A. et al. (2014),
+“Computational thinking in elementary and secondary teacher education”. ACM Transactions on Computing Education.
+
+In summary, it is safe to say that computational thinking is an approach to solving problems using computers.
+
+What is computational thinking not?
+
+ CT is a problem-solving approach that differs from programming, it is closely related but its definition is broad.
+ Teaching CT is not the same as teaching programming which focuses on high-quality software production, while CT is an
+approach to problem-solving that assumes a computer will execute the solution.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+33
+
+1. Problem Solving & Computational Thinking
+
+How is the computational thinking used?
+CT aids problem-solving with computer involvement.
+CT can be used in various fields, for examples
+
+ To a computer scientist, it means the study of algorithms and their application to different problems.
+ To a mathematician, it might mean carrying out long division factoring or doing carries in addition or subtraction.
+ To a scientist, it might think of it as the process of doing an experimental procedure.
+
+CT in actions, for examples
+
+ Predicting global climate change is only possible because of advanced computer models. According to the UK Met Office,
+‘The only way to predict the day-to-day weather and changes to the climate over longer timescales is to use computer
+models.’
+ CT has a long history in influencing law, aiming to automate verdicts and minimize human discretion. Legal reasoning
+systems help investigators understand evidence and remind them of missed hypotheses.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+34
+
+1. Problem Solving & Computational Thinking
+
+Computational thinking 4-elements
+
+1. Decomposition: Breaking a problem into simpler parts, for example, creating a book report.
+
+ 1) read the book, 2) identify main characters, 3) identify theme, 4) analyze plot and character relationships, 5) write about them.
+
+2. Pattern Recognition: Identifying what different problems have in common.
+
+ if you’ve used a template for writing book report outlines, you can include that same process in your program.
+ A book report outline may be different, but the process of writing the report is the same.
+
+3. Abstraction: Separating important details from non-important ones.
+
+ Focusing on important book parts, like major characters, setting, and theme, creates a program that works with various books with different plots
+and themes.
+
+4. Algorithm Design: Creating a solution with simple steps that anyone can follow.
+
+ Algorithm design means writing out the steps you need to follow so that you can get the same solution every time.
+ When a solution is carried out by an algorithm, the solution becomes reusable.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+35
+
+1. Problem Solving & Computational Thinking
+
+Computational thinking – Example: Bakery’s Billing
+
+John runs a bakery with many customers. Each day, he calculates the total price of bakery items for each customer. Each customer will
+purchase a different number of bakery items, and the price of each type of bakery item is not the same either. However, he often encounters
+miscalculations during the billing process. To address this issue, you can assist John in solving the problem by applying computational
+concepts (CT) to ensure the accurate calculation of the total price of the bakery items.
+1. Decomposition: cost of each item, for examples,
+ How much are these cakes? Cost of cakes: number of cake * price of cake
+ How much are these muffins? Cost of muffins: number of muffin * price of muffin
+
+2.
+
+Pattern Recognition: calculation of price pattern
+
+3.
+
+Abstraction
+
+4.
+
+Algorithm
+
+ Cakes' price = quantity of cakes * unit-price
+ Muffins' price = quantity of cakes * unit-price
+
+ Total price = (item1’s prices)+ (item2’s price) + … + (itemn’s price)
+ INPUT unit_price[i], number_of_unit[i]
+ OUTPUT cost = Sum of unit_price[i] * number_of_unit[i]
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+36
+
+1. Problem Solving & Computational Thinking
+
+Computational thinking – Example: Roots of a Quadratic Equation
+Giving 𝑥𝑥 + 3𝑥𝑥 − 10 = 0, finding the root can be done by 𝑥𝑥 =
+Using CT approach
+2
+
+1. Decomposition
+
+ Split the formula into 2 sub-problems: 𝑥𝑥 =
+
+−𝑏𝑏+ 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+and 𝑥𝑥
+2𝑎𝑎
+
+ With the first part, finding 𝑏𝑏2 , 4𝑎𝑎𝑎𝑎, 𝑏𝑏2 − 4𝑎𝑎𝑎𝑎,
+ Repeat for 𝑥𝑥 =
+
+−𝑏𝑏− 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+2𝑎𝑎
+
+2. Pattern Recognition
+
+−𝑏𝑏± 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+2𝑎𝑎
+
+−𝑏𝑏− 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+2𝑎𝑎
+−𝑏𝑏+
+𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+2
+𝑏𝑏 − 4𝑎𝑎𝑎𝑎, 2𝑎𝑎 and 𝑥𝑥 =
+2𝑎𝑎
+
+=
+
+ Do we need one?
+
+3. Abstraction
+
+ Do we need one?
+
+4. Algorithm
+
+ INPUT 𝑎𝑎, 𝑏𝑏, 𝑐𝑐
+ OUTPUT𝑥𝑥 =
+
+−𝑏𝑏+ 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+and 𝑥𝑥
+2𝑎𝑎
+
+2. Problem solving, computational thinking, and algorithms
+
+=
+
+−𝑏𝑏− 𝑏𝑏2 −4𝑎𝑎𝑎𝑎
+2𝑎𝑎
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+37
+
+2. Algorithm
+
+What Is an Algorithm?
+
+A set of instructions to complete a task – the computational procedure
+Takes values as input and makes values as output
+
+What makes a good algorithm?
+
+Correctness – the algorithm is correct if it stops with the correct output (works for all input)
+Efficiency – high speed (e.g., computational) with less effort (e.g., memory, space)
+Comprehensibility – understandable (e.g., by a human)
+
+Example – Sorting Algorithm
+
+Receive input as a set of unsorted values, e.g., 1, 5, 7, 9, 8, 2
+Produce a sorted output, e.g., 1,2,5,7,8,9 or 9,8,7,5,1
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+38
+
+2. Algorithm
+
+Why Learn Algorithms?
+
+Important for all branches of computer science
+Pervasive (แพร่หลาย)
+Precise for implementation on electronic devices, smartphones, computers, etc.
+Challenge
+Fun!
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+39
+
+2. Algorithm
+
+Where are Algorithms used?
+
+Human Genome Project – identify 100,000 genes of human DNA
+Internet
+Google search engine uses algorithms for ranking web pages
+Facebook uses algorithms for ranking results on the feed
+
+Cryptography
+
+Data Encryption, decryption, authentication, etc.
+
+Autonomous Vehicle
+
+Self-driving car
+Moral Machines https://www.youtube.com/watch?v=jPo6bby-Fcg
+
+Everywhere
+
+Financial, medical, proprietary, spam, business, game. etc.
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+40
+
+2. Algorithm
+
+Algorithms for Problem Solving – Examples
+
+An AI system (NPC) that follows the player using graph algorithms.
+An AI system (NPC) that helps the enemy navigate around the map with pathfinding
+algorithms.
+A recommendation system that utilizes k-nearest neighbors.
+New problem-solving ideas that still need algorithms.
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+41
+
+2. Algorithm
+
+Algorithm – Example: Search Algorithm
+
+If you have 8 unique numbers, you need to search for a secret number
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+How do you do it?
+
+Simple Search (guessing) with some initial number until you find a secret number
+Ascending or Descending order
+Guess and get feedback, lower or higher
+
+Case 1: a secret number is 1
+
+Guessing only 1 time (max) (1)
+
+Case 2: a secret number is 8
+
+Guessing 8 times (max) (1(lower)2 (…)3(…)4 (…)5 (…)6 (…)7(lower)8)
+
+Note: The data must be in a sorted order
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+42
+
+2. Algorithm
+
+Algorithm – Example: Search Algorithm (Cont)
+
+If you have 8 unique numbers, you need to search for a secret number
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Can we do better?
+
+Binary Search – cut data by half
+
+Ascending or Descending order
+Guess and get feedback, lower or higher
+
+Case 1: a secret number is 1
+
+5 (higher)3(higher)1: Guess 3 times (max)
+
+Case 2: a secret number is 8
+
+5 (lower)7(lower)8: Guess 3 times (max)
+
+Note: The data must be in a sorted order
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+43
+
+2. Algorithm
+
+Algorithm – Example: Search Algorithm (Cont)
+
+Efficiency (Performance) - Simple Search vs. Binary Search
+Binary Search Algorithm (maximum attempts)
+Case 128 unique numbers
+
+ 6432168421 (7 times)
+
+Case 1,024 unique numbers
+
+ 5122561286432168421 (10 times)
+Problem/Algorithm
+Search number of 8
+Search number of 128
+Search number of 1,024
+Search number of 1,048,576
+Search number of 1,073,741,824
+
+2. Problem solving, computational thinking, and algorithms
+
+Note: For illustration purpose, 1 calculation equal 1 millisecond
+Maximum Attempts (times)
+Simple Search
+Binary Search
+Attempts
+Time
+Attempts
+Time
+8
+8 ms
+log2(23) = 3
+3 ms
+128
+128 ms
+log2(27) = 7
+7 ms
+1,024
+1.024 sec
+log2(210) = 10
+10 ms
+1,048,576
+~17.47 min
+log2(220) = 20
+20 ms
+1,073,741,824
+~12.42 days
+log2(230) = 30
+32 ms
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+44
+
+Summary
+
+Understand
+
+The basic concept of problem solving and computational thinking.
+The basic knowledge of algorithm
+Meaning of algorithm
+Utilizing the algorithm
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+45
+
+Assignment
+
+Do the 2nd Assignment
+
+Use problem-solving techniques to solve the problem.
+
+1) Problem: It could be anything you see or face in your daily life.
+2) Approach: It could be any technique from problem-solving methods such as IDEAL, 7 steps,
+or CT.
+3) Create a report that does not exceed 2-A4 pages (in Thai for DSBA/AIT and in English for
+BIT).
+4) It does not need to be practical, BE CREATIVE !!!
+
+2. Problem solving, computational thinking, and algorithms
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+46
+
+

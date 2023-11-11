@@ -1,0 +1,597 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 12
+String
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1.
+
+Introduction to String in Python.
+
+1.
+
+Understand basic string operations.
+
+2.
+
+Basic String Operations.
+
+2.
+
+Understand some advanced built-in string operation.
+
+3.
+
+Advanced String Operations.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Introduction to String in Python
+
+• A string is a built-in class in Python referred to as str.
+• Strings can store text from various sources, including individual words, sentences,
+paragraphs, and even entire files.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Introduction to String in Python
+
+•
+•
+•
+•
+•
+
+Strings in Python can be enclosed by either single quotes ('') or double quotes ("").
+According to Google, single quotes are more commonly used.
+Both single quotes and double quotes give the same result when defining strings.
+A double-quoted string can contain single quotes without any issues.
+Likewise, a single-quoted string can contain double quotes.
+str_1 = 'quote'
+type(str_1) # Output: <class 'str'>
+
+str_2 = "quote"
+type(str_2) # Output: <class 'str'>
+str_1 == str_2
+
+# Output: True
+
+str_single_quote = 'This " is easy to understand.'
+str_double_quote = "This ' is easy to understand."
+str_single_quote and str_double_quote demonstrate how you can include quotes of the opposite type
+within a string without any issues.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Introduction to String in Python
+
+• Strings in Python are immutable, once created, strings cannot be changed
+or modified.
+• String operations create new strings with changes, leaving the original
+string unchanged.
+str_is_immutable = 'Creat'
+str_is_immutable[0] = 'X'
+assignment
+
+# TypeError: 'str' object does not support item
+
+# Attempting to change the value to the current value
+str_is_immutable[0] = 'C'
+# TypeError: 'str' object does not support item
+assignment
+new_str = str_is_immutable + 'a new file.'
+12. String
+
+#
+
+Creata new file.
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Introduction to String in Python
+
+• String – Example Applications
+
+Deitel, P. and Deitel, H., 2020. Intro to Python for Computer Science and Data Science. Pearson Education.
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+2. Basic String Operations
+
+Basic String Operations:
+• Formatting Strings: Enhances data clarity through string formatting.
+name = "Alex"
+age = 60
+formatted_string = f"My name is {name} and I am {age} years old."
+print(formatted_string) # My name is Alex and I am 60 years old.
+
+• Indexing and Slicing: Involves accessing individual characters, all characters using
+iteration, and substrings using slicing.
+text = "Hello, World!"
+first_character = text[0]
+substring = text[7:12]
+
+# H
+# World
+
+• Concatenating Strings: Combines multiple strings into one.
+str1 = "Hello"
+str2 = "World"
+concatenated_string = str1 + ", " + str2 + "!"
+print(concatenated_string)
+# Hello, World!
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. Basic String Operations
+
+• Formatting Strings
+
+• Types of Presentation
+
+• Numbers: Integer and Floating-Point
+• Characters
+• Strings
+
+• Width and Alignment
+
+• Field Width (display width)
+• Alignment (left, right, or center)
+• String's format Method
+• Formatting a string using the built-in format method
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. Basic String Operations
+
+• Formatting Strings – Presentation Types
+• Standard syntax:
+
+f’{value: presentation_type}’
+• d – Integer, f – Decimal number, c – Character, and s – String
+
+• Numbers
+
+• Integer
+f'{10:d}' will produce '10’. d is used to represent an integer, and since 10 is an integer, it is formatted as the string '10'.
+
+• Floating-Point
+
+• Characters
+• Strings
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+2. Basic String Operations
+
+• Formatting Strings – Width and Alignment
+• Field Width – Total Display Width
+• Alignment:
+
+• Default – Numbers are right-aligned and other types are left-aligned.
+Numbers: Right alignment
+Numbers: Right alignment
+String: Left alignment
+
+• User Specified: < for Left, > for Right, and ^ for Center Alignment.
+Force left
+Force right
+Force center
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+2. Basic String Operations
+
+• Formatting Strings – String’s format Method
+• Reserved placeholder at the desired positions:
+‘{}’.format(value)
+
+• Single placeholder
+
+• Multiple placeholders
+• Referencing Arguments by Position Number
+• Referencing Arguments by Keyword
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+2. Basic String Operations
+
+• Indexing and Slicing
+• Indexing
+
+• Individual Character
+• s
+
+String’s Index includes
+Whitespace
+
+• Iterating Loop: All Characters
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+2. Basic String Operations
+
+• Indexing and Slicing
+
+• Slicing – string[start:end:step]
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+2. Basic String Operations
+
+• Concatenating Strings
+
+• Join more strings together with + operator
+
+• Repeat string with * operator
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+3. Advanced String Operations
+
+• Testing Methods:
+
+• Use of the in and not operators.
+
+• Character's test methods:
+
+• isdigit()– Returns True if the string contains only digit characters (0–9).
+• isalpha()– Returns True if the string contains only alphabetic characters (letters).
+• isalnum()– Returns True if the string contains only alphanumeric characters (digits and letters).
+
+• String Methods:
+•
+•
+•
+•
+•
+•
+
+Removing whitespace from a string.
+Altering character case.
+String comparison.
+Searching within a string.
+Replacing parts of a string.
+Splitting and joining strings.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+3. Advanced String Operations
+
+• Testing Methods: in and not Operators
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+3. Advanced String Operations
+
+• Testing Methods: Character’s Test Methods
+
+• isdigit()– Returns True if the string contains only digit characters (0–9).
+
+• isalpha()– Returns True if the string contains only alphabetic characters (letters).
+
+• isalnum()– Returns True if the string contains only alphanumeric characters (digits and letters).
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+3. Advanced String Operations
+
+• Testing Methods: Other Methods
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+3. Advanced String Operations
+
+• String Methods: Removing Whitespace from a String.
+• Leading and Trailing Whitespace: strip()
+
+• Leading Whitespace: lstrip()
+
+• Trailing Whitespace: rstrip()
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+3. Advanced String Operations
+
+• String Methods: Altering Character Case
+
+• Capitalizing Only the First Character in a String: capitalize()
+
+• Capitalizing the First Character of Every Word in a String: title()
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+3. Advanced String Operations
+
+• String Methods: String Comparison
+• Strings are compared based on their
+underlying integer numeric values.
+• For example:
+• 'A' has a numeric value of 65.
+• 'a' has a numeric value of 97.
+
+• You can check a character's code
+using the ord function, like this:
+ord(one-character)
+ord(“A”) returns 65
+ord(“a”) returns 97
+
+https://bournetocode.com/projects/GCSE_Computing_Fundamentals/pages/img/ascii_table_lge.png
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+3. Advanced String Operations
+
+• String Methods: String Comparison
+
+• Strings can be compared using various comparison operators, including:
+•
+•
+•
+•
+•
+•
+
+12. String
+
+== (Equal)
+!= (Not Equal)
+< (Less Than)
+<= (Less Than or Equal To)
+> (Greater Than)
+>= (Greater Than or Equal To)
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+3. Advanced String Operations
+
+• String Methods: Searching for a Substring within a String
+• Counting Occurrences: count()
+
+• Counts the number of occurrences of a substring in the string.
+• Format: count(substring[, start[, end]])
+
+• substring: This is the required parameter. It's the substring you want to count.
+• [...]: The square brackets indicate that the parameters inside them are optional.
+• In this case, start and end are optional parameters.
+
+text = "apple, banana, cherry, apple, banana, cherry, apple, banana" # 59 characters
+substring = "apple"
+# Count the number of times 'apple' appears in different sections of the text
+count1 = text.count(substring) # Count in the entire text, return 3
+count2 = text.count(substring, 0, 15) # Count in the first 15 characters, return 1
+count3 = text.count(substring, 16, 31) # Count in the next 16 characters , return 1
+count4 = text.count(substring, 32) # Count from the 32nd character to the end , return 1
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+3. Advanced String Operations
+
+• String Methods: Searching for a Substring within a String
+• Locating a Substring:
+
+• index(substring[, start[, end]])
+• Returns the lowest index where the substring is found in the string.
+• Optional start and end parameters specify the search range.
+• rindex(substring[, start[, end]])
+• Searches from the end of the string and returns the highest index where the substring is found.
+• Optional start and end parameters specify the search range.
+
+3
+16
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+3. Advanced String Operations
+
+• String Methods: Searching for a Substring within a String
+• Locating a Substring at the Beginning or End:
+
+• startswith(prefix[, start[, end]])
+• Returns True if the string starts with the specified prefix, otherwise False.
+• Optional start and end parameters specify the search range.
+• endswith(suffix[, start[, end]])
+• Returns True if the string ends with the specified suffix, otherwise False.
+• Optional start and end parameters specify the search range.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+3. Advanced String Operations
+
+• String Methods: Replacing a String
+
+• To replace one string with another, you can use the replace() method.
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+3. Advanced String Operations
+
+• String Methods: Splitting and Joining Strings
+
+• When dealing with sentences or text, it's common to break them into individual words or tokens.
+• These tokens are typically separated by delimiters such as whitespace characters (blank, tab,
+newline).
+• String Methods: split and join
+• Splitting String:
+• split(delimiter[, maxsplit])
+• Splits a string into a list of words (tokens) based on the specified delimiter.
+• An optional maxsplit parameter limits the number of splits.
+
+Max split is 2, the rest will be remained
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+3. Advanced String Operations
+
+• String Methods: Splitting and Joining Strings
+• Joining String:
+
+• join(iterable)
+• Concatenates the strings in an iterable, combining them into a single string.
+• The iterable must contain only string values; otherwise, a TypeError will occur.
+
+TypeError
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+Summary
+
+Understanding and Working with Strings:
+• Basic String Operations:
+
+• Formatting
+• Creating and Accessing: Indexing and Slicing
+• Concatenating
+
+• Advanced String Operations:
+•
+•
+•
+•
+•
+•
+
+Methods:
+Count
+Replace
+Index
+Split
+Join
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+Assignment
+
+Do the assignment
+• Details will be given in the class
+
+12. String
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+

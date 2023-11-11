@@ -1,0 +1,928 @@
+(06066303 ) Problem Solving and Computer Programming
+(06036118 ) Problem Solving in Information Technology
+Asst. Prof. Samart Moodleah, PhD.
+2023
+
+Lecture 01
+Course Introduction & Program Design Process
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+2
+
+Topics: Objectives and Expected Outcomes
+
+Objectives
+
+Expected Outcomes
+
+The objectives of this lecture are:
+
+By the end of this lecture, you will be able to:
+
+1. Course introduction and evaluation
+2. Basic of how computer work
+3. Designing a program and Flowchart & Pseudo code
+
+1. Course Introduction & Program Design Process
+
+1. Understand the course, grade, and project
+2. Understand the concept of how computer work
+3. Understand the basic of programming design
+and able to work with flowchart
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+3
+
+1. Introduction and Evaluation
+
+Course Introduction
+
+Credits (Lecture: Lab: Self-Study)
+ 3 (2-2-5)
+
+Description
+ Problem solving strategies and concepts (กลยุทธ์และหลักการแก้ปัญหา)
+ Algorithmic thinking (การคิดแบบขัน้ ตอนวิธี)
+ Flowchart (ผังงาน)
+ Concepts and introduction to computer programming (แนวคิด และหลักการสร้างโปรแกรมคอมพิวเตอร์เบือ้ งต้น)
+ Computational Thinking (แนวคิดเชิงคาํ นวณ)  OPTIONAL for DSBA/AIT
+
+Reference Books (Mixed)
+
+
+
+
+
+
+
+Charles Severance. Python for Everybody: Exploring Data in Python 3, free PDF link
+Deitel, Paul, and Harvey Deitel. Intro to Python for Computer Science and Data Science. Pearson Education, 2020.
+Gaddis, Tony. Starting Out with Python, 5/e. Pearson Education
+Gaddis, Tony. Starting Out with Programming Logic and Design, 5/e. Pearson Education
+Venit, Stewart, and Drake, Elizabeth. Prelude to Programming: Concepts and Design, Global Edition, 6th edition
+Conn, Charles, and Robert McLean. Bulletproof Problem Solving: The One Skill that Changes Everything. John Wiley & Sons, 2019.
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+4
+
+1. Introduction and Evaluation
+
+Course Syllabus
+#week
+1
+2
+3
+4
+5
+6
+7
+8
+Midterm
+9
+10
+11
+12
+13
+14
+15
+Final
+
+Date/Time
+DSBA/AIT
+BIT
+
+10
+17
+24
+31
+7
+Makeup
+Makeup
+21
+3 (Sunday)
+09.30-12.30
+4
+11
+18
+25
+2
+9
+16
+7 (Tuesday)
+09.30-12.30
+
+11
+18
+25
+Makeup
+8
+15
+Makeup
+22
+3 (Sunday)
+09.30-12.30
+5
+12
+19
+26
+3
+10
+17
+7 (Tuesday)
+09.30-12.30
+
+1. Course Introduction & Program Design Process
+
+Month
+
+Jul
+Jul
+Jul
+Jul/Aug
+Aug
+Aug
+Aug
+Aug
+
+Lecture
+
+Lab
+
+Intro, Grading, Basic of Computer and Flowchart
+Raptor 1
+Problem solving, CT, Algorithms: Searching and Sorting Raptor 2
+Data representation & Introduction to Python
+Raptor 3 + Python 1 (introduction, variable and statement)
+Decision Structures amd Boolean Logic
+Python 2 (if, if-else, logical operator and Boolean variable)
+Repetition Structure
+Python 3 (while-loop, for-loop)
+Functions
+Python 4 (void & non-void function, variable-scope)
+Project - 1 Completion
+Self Study
+Presentation & Review
+
+Sep
+
+Midterm: Mon. 28 Aug. - Sun. 3 Sep 2023
+
+Sep
+Sep
+Sep
+Sep
+Oct
+Oct
+Oct
+
+Files and Exceptions
+Sequences: Lists and Tuples
+Dictionaries and Sets
+Array programming with NumPy
+String
+Project - 2 Completion
+Presentation & Review
+
+Nov
+
+Final: Sun. 30 Oct. - Fri. 10 Sep. 2023
+
+Python 5 (file input & output, loops to process file, exception)
+Python 6 (sequence data, list, tuple, n-dimension lists)
+Python 7 (non-sequence data, slicing)
+Python 8 (array and numPy library)
+Python 9 (string operation and slicing)
+Self Study
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+5
+
+1. Introduction and Evaluation
+
+Course Evaluation
+Criteria (100)
+
+ Attendance and Homework: 15
+ Midterm: 30
+ Final: 30
+ Project: 25
+
+ Members: X
+ Project – Part 1 (10: Problem solving/CT + flowchart + plan)
+ Project – Part 2 (15: Programming and application)
+ Scope – Application to solve a single problem using Python
+
+
+
+
+
+
+What is the problem you are trying to solve?
+Why is it important?
+How to solve it?
+What is work distribution?
+Etc.
+
+1. Course Introduction & Program Design Process
+
+Grade
+A
+ B+
+B
+ C+
+C
+ D+
+D
+F
+
+X ≥ 80
+
+75 ≤ 𝑋𝑋 < 80
+70 ≤ 𝑋𝑋 < 75
+65 ≤ 𝑋𝑋 < 70
+60 ≤ 𝑋𝑋 < 65
+55 ≤ 𝑋𝑋 < 60
+50 ≤ 𝑋𝑋 < 55
+𝑋𝑋 < 50
+
+* 𝑋𝑋 is your net-score (full score is 100)
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+6
+
+1. Introduction and Evaluation
+
+Project examples (2022)
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+7
+
+1. Introduction and Evaluation
+
+Project examples (2022)
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+8
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+What is computer?
+
+“An electronic machine that is used for storing, organizing, and finding words, numbers, and
+pictures, for doing calculations, and for controlling other machines”, Cambridge dictionary.
+It executes tasks by carrying out a list of instructions called a program.
+
+(Brief) Evolution of computer
+The ENIAC computer (1945)
+
+Vacuum tubes, large and heavy
+
+Personal Computer (PC)
+
+Integrated circuit (IC), small
+
+Cloud computing
+
+No physical hardware
+
+Marlyn Wescoff [left] and Ruth Lichterman were two of
+the female programmers of ENIAC
+
+J. Presper Eckert, John Mauchley, Betty Jean
+Jennings, and Herman Goldstine in front of ENIAC
+
+https://spectrum.ieee.org/untold-history-of-ai-invisible-woman-programmed-americas-first-electronic-computer
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+9
+
+2. Basic of how computer work
+
+ENIAC: Electronic Numerical Integrator and Computer
+
+ There was only one ENIAC ever built, ~ 1945.
+ ENIAC used nearly 17,500 vacuum tubes, 7,200 diodes, and miles of wire to construct the machine.
+ ENIAC also included seventy thousand resistors, 10,000 capacitors, 1,500 relays, 6,000 manual switches, and 5 million
+soldered connections.
+ ENIAC took up 1,800 square feet (170 m2) and weight is ~ 30 tons.
+
+ENIAC computer
+1. Course Introduction & Program Design Process
+
+Women hold the ENIAC memory units
+
+ENIAC computer on a Chip
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+10
+
+2. Basic of how computer work
+
+Von Neumann computer architecture
+
+A modern computer architecture (model) is proposed (since ENIAC) and still used
+It consists of 3 main parts:
+ A central processing unit (CPU)
+
+ Arithmetic logic unit (ALU): performs all calculations and logical operations
+ A control unit
+
+ Memory unit
+
+ Store data and instructions that CPU uses to perform
+
+ Input and output mechanisms
+
+ Mouse/Keyboard to get instructions
+ Monitor to display the results
+
+Von Neumann architecture
+
+Robert Oppenheimer (right) with John von Neumann in front of the Electronic
+Computer Project’s ENIAC machine, ca. 1952.
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+11
+
+2. Basic of how computer work
+
+Personal Computer (PC)
+
+A compact computer that uses a microprocessor and is designed for individual use, as by a
+person in an office or at home or school, for such applications as word processing, data
+management, financial analysis, or computer games.
+
+Microprocessor
+
+1. Course Introduction & Program Design Process
+
+IBM 5150, 1984
+
+Apple Macintosh, 1984
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+12
+
+2. Basic of how computer work
+
+Cloud computing
+
+The on-demand availability of computer system resources, especially data storage (cloud
+storage) and computing power, without direct active management by the user.
+Providers
+IBM Cloud
+Amazon AWS
+Microsoft Azure
+Google Cloud
+Etc.
+
+Source: Internet
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+13
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+
+Hardware vs. Software & Programming Languages
+Hardware
+
+All the Physical devices (components)
+that a computer is made of.
+Five main components
+ CPU (Central Processing Unit)
+ Memory (RAM)
+ Storage (HDD/SSD)
+ Input devices (Mouse/Keyboard)
+ Output devices (Monitor/Printer/Speaker)
+
+Source: Internet
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+14
+
+2. Basic of how computer work
+
+How does computer hardware work?
+
+1. Course Introduction & Program Design Process
+
+https://www.youtube.com/watch?v=d86ws7mQYIg
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+15
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+
+Hardware vs. Software & Programming Languages
+Hardware – How data is stored
+
+Data in any format will be translated and stored in computer understanding format – Binary
+ Number (Decimal to Binary format)
+ 9  1001
+ 123  1111011
+
+ Character
+
+ A  65 (ASCII) 01000001
+
+ Sound
+
+ Analog  Digital
+
+ Image
+
+1. Course Introduction & Program Design Process
+
+Source: Internet
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+16
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+
+Hardware vs. Software & Programming Languages
+Software (or Program)
+
+Set of instructions (machine language) that the computer (CPU) understands
+
+1. Course Introduction & Program Design Process
+
+Source: Internet
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+17
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+
+Hardware vs. Software & Programming Languages
+
+Types of Software – two categories: 1) system and 2) application
+1. System Software
+
+ Operating Systems (OS)
+
+ Windows, OS X, Linux, Unix, Android, iOS, etc.
+
+ Utility Programs
+
+ Virus Protection Software, Disk Defragment, etc.
+
+ Software Development Tools
+
+ Jupyter, Visual Studio, MATLAB, Mathematica, PyCharm, Sublime, XCode, etc.
+
+2. Application Software
+
+ MS Offices, Adobe, Maya, Daily-Used-Applications, etc.
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+18
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+
+Hardware vs. Software & Programming Languages
+Types of Programming and Scripting Languages: 4 main types
+1. Machine languages
+
+It may be more accurate to call a programming
+language a compiled language. When the code is
+run, it is translated into a machine-readable code.
+This process is called compilation. Compilation
+occurs before a program is executed.
+
+ A sequence of bits that are all zeros and ones. Each combination of zeros and ones is an instruction to the computer about something. Machine
+language is the only language the computer can understand directly.
+
+2. Assembly languages (compiled language)
+
+ A symbolic representation of machine language. There is usually a one-to-one correspondence between the two; each assembly language
+instruction translates into one machine language instruction.
+
+3. High-level languages (compiled language)
+
+ Usually contain English words and phrases. Their symbols and structure are far removed from those of machine language. A single instruction in a
+high-level language usually translates into many instructions in machine language.
+ Examples, C, C++, C#, Visual Basic, COBOL, Java
+
+4. Scripting/Interpreted languages (non-compiled language)
+
+ Scripting language code is interpreted “on the fly” – that is, as each line of code is executed, it is translated by an interpreter to the computer.
+ Examples, JavaScript, PHP, Python
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+19
+
+2. Basic of how computer work
+
+Examples: Assembly language to Machine language
+
+Source: Starting Out with Python, Tony Gaddis, 5/e. Pearson Education
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+20
+
+2. Basic of how computer work
+
+Examples: Compiling a high-level programming and executing it
+
+Source: Starting Out with Python, Tony Gaddis, 5/e. Pearson Education
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+21
+
+2. Basic of how computer work
+
+Examples: Executing a high-level programming with an interpreter
+
+Source: Starting Out with Python, Tony Gaddis, 5/e. Pearson Education
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+22
+
+2. Basic of how computer work
+
+Computer and Computer Programming
+Programming Languages – Popularity
+
+https://www.tiobe.com/tiobe-index/
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+23
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+The Program Development Cycle
+Concept of Designing a Program
+
+ Before writing any codes, program design involves careful consideration, using
+tools like flowcharts and pseudocode.
+
+Design the
+program
+
+The Program Development Cycle
+
+ Design the program. Professional programmers emphasize the importance of
+carefully designing a program before writing code, starting with a program
+design.
+ Write the code. Programmers write code in high-level languages following
+syntax rules that dictate keywords, operators, and punctuation characters.
+Violations can lead to syntax errors and the compiler or interpreter displays an
+error message.
+ Correct syntax error. Programmer must correct them before compiled and
+translated into a machine language program or executed by an interpreter.
+ Test the program. Once the code is in an executable form, it is tested for logic
+errors, which are not program-related but cause incorrect results due to
+mathematical mistakes.
+ Correct logic error. Debugging a program involves correcting logic errors and
+reversing the development cycle if the program produces incorrect results. This
+process may require changes to the original design.
+
+1. Course Introduction & Program Design Process
+
+Correct logic
+error
+
+Test the
+program
+
+Write the code
+
+Correct syntax
+error
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+24
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Designing a program is crucial
+
+ A program's design serves as its foundation, requiring constant effort to fix and improve.
+
+ If you build a house on a poorly constructed foundation, eventually you will find yourself doing a lot of work to fix the house!
+
+ The process involves understanding the task and determining necessary steps to perform it.
+ The process of designing a program can be summarized in the following two steps:
+ Understand program's task.
+
+ Programmer gains this understanding by working directly with the customer (customer, boss, or colleague).
+ Interviews are conducted to gather details about the program's task, and a follow-up interview is often necessary to gather additional information.
+ The programmer then creates a list of software requirements, which are single tasks the program must perform to satisfy the customer.
+ Once the customer agrees, the programmer can proceed to the next phase.
+
+ Determine necessary steps.
+
+ A program's task is broken down into a series of steps that anyone can follow.
+ For example, to boil water, the instructions can be split into 4 steps:
+
+ 1) pour desired amount into pot, 2) place on stove burner, 3) turn to high, and 4) watch for rising bubbles.
+
+ The above steps is an algorithm.
+
+ It is a set of logical steps ordered sequentially, ensuring successful boiling water by following the steps exactly as they appear.
+
+ Programmers translate these steps into code using tools such as flowcharts or pseudocode.
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+25
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Flowchart: Standard Symbols
+
+Flowcharting is a graphic diagram depicting program steps, used by programmers to design programs.
+Terminal: beginning and end of a set of program
+
+Decision: show the decision process
+
+Input/Output: any I/P and O/P operation
+
+Document I/P and O/P: input from document and output to
+document
+
+Process: computer processing unit
+
+On-page connector: connect parts of a flowchart continued
+on the same page
+
+Comment: write an explanation to clarify something
+
+Off-page connector: connect parts of a flowchart continued
+to separate page
+
+Predefined processing: indicate any process not specially
+defined in the flowchart
+1. Course Introduction & Program Design Process
+
+Flow line: connect symbols
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+26
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Pseudo Code
+
+ The word “pseudo” means fake, so pseudocode is fake code.
+ An informal language with no syntax rules, to create models or mock-ups of programs.
+ This allows them to focus on the program's design without worrying about syntax errors.
+ Once a satisfactory design is created, the pseudocode can be translated directly to actual code.
+ This helps in avoiding errors and ensuring a more accurate and efficient code.
+ For example
+Input this
+Calulate that
+Output this * that
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+27
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Flowchart and Pseudo Code
+Flowchart
+
+Programming flow – top to bottom
+Tools for drawing: Draw.io, MS-Office, Pen & Paper
+
+Start
+
+Pseudo Code
+
+Simplified programming language describes steps
+in a computer algorithm
+High-level description – syntax-free approach
+
+Example: Rectangle Area Algorithm
+Start
+Number area, width,
+Input width, height
+
+w, h
+
+area = width * height
+
+area = w * h
+area
+
+height
+
+Display
+
+area
+
+End
+
+End
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+28
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Flowchart: Examples – Buy A Snack From Vending Machine
+Step 1. Insert a money (bank note/coin)
+Step 2. Select a snack
+Step 3. Confirm a selection
+Step 4. Machine operating
+Step 5. IF a snake is dropped in the compartment
+THEN Open and grab a snake
+ELSE Wait and call for service (or &%%$#!@)
+Step 6. STOP
+
+0. Start
+1. Insert money
+2. Select a snack
+3. Confirm
+4. Machine operating
+Grab and Go
+
+Yes
+
+5. If snack
+is dropped
+
+No
+
+Wait, Call for help
+
+6. Stop
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+29
+
+3. Designing a Program and Flowchart & Pseudo Code
+
+Flowchart: Examples – Cooking Rice
+Take the rice to be cooked.
+Procure the container.
+Procure the water.
+Wash the rice in the water.
+Put the rice into the container.
+Pour water into the container.
+IF WATER LEVEL = 1 INCH ABOVE THE RICE
+THEN GOTO STEP 8
+ELSE GOTO STEP 6
+ENDIF
+Step 8. Light the burner on the stove.
+Step 9. IF THE RICE IS BOILED
+THEN GOTO STEP 12
+ELSE GOTO STEP 10
+ENDIF
+Step 10. Heat the container.
+Step 11. Go to step 9.
+No
+Step 12. Turn off the flame.
+Step 13. Move the container off the stove.
+Step 14. Distribute the cooked rice.
+Step 15. STOP.
+
+Step 1.
+Step 2.
+Step 3.
+Step 4.
+Step 5.
+Step 6.
+Step 7.
+
+1. Course Introduction & Program Design Process
+
+0. Start
+
+1. Take the rice to be cooked
+
+Inputs
+
+2. Procure the container
+
+Inputs
+
+3. Procure the water
+
+Inputs
+
+8. Light the burner on the stove
+(Step. 11)
+
+No
+9. IF THE RICE
+4. Wash the riceHOW
+in theTOwater
+MAKE A FLOWCHART
+OF THIS COOKING RICEISALGORITTHM?
+Processing
+BOILED
+5. Put the rice into the container
+6.Pour water into the container
+7. IF WATER LEVEL = 1
+INCH ABOVE THE RICE
+
+Processing
+Processing
+with loop
+Yes
+
+10. Heat the container
+
+Yes
+12. Turn off the flame
+13. Move the container off the stove
+14. Distribute the cooked rice
+15. Stop
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+30
+
+Summary
+
+Understand
+
+Course expectation
+Course evaluation
+Overview of computer and computer programming
+Fundamentals of designing a program and the use of Flowcharts
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+31
+
+Assignment
+
+Do the 1st Assignment
+
+Detail is given in the Classroom
+
+1. Course Introduction & Program Design Process
+
+Problem Solving & Computer Programming/Problem Solving in Information Technology
+
+32
+
+
